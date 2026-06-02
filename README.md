@@ -6,6 +6,7 @@ KanjiSlice is a game that helps you learn kanji by having fun tracing them with 
 ## GITHUB
 - Commit : [SECTION] Comment
 > Exemple : [ART] Adding files for the menu.
+
 > Exemple : [DEV] Adding files script name.
 
 
