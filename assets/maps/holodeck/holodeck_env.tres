@@ -1,4 +1,4 @@
-[gd_resource type="Environment" load_steps=4 format=3 uid="uid://bacqoq62qs27y"]
+[gd_resource type="Environment" format=3 uid="uid://bacqoq62qs27y"]
 
 [ext_resource type="Texture2D" uid="uid://dqoe1c5yn5dnv" path="res://assets/ambientcg.com/SkyOnlyHDRI023_2K-TONEMAPPED.jpg" id="1_j3h8e"]
 
