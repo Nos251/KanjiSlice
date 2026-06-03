@@ -15,7 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="Godot XR Tools Demo"
-run/main_scene="res://demo_staging.tscn"
+run/main_scene="uid://btbbr057a83en"
 config/features=PackedStringArray("4.6")
 config/icon="res://icon.png"
 run/main_scene.pc="uid://dbeb7yij08a0k"
@@ -24,6 +24,10 @@ run/main_scene.pc="uid://dbeb7yij08a0k"
 
 XRToolsUserSettings="*uid://bqgb8i74tm0t"
 XRToolsRumbleManager="*uid://by853dk86g1qw"
+
+[debug_draw_3d]
+
+settings/addon_root_folder="res://addons/addons/debug_draw_3d"
 
 [editor_plugins]
 
