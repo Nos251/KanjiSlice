@@ -4,6 +4,8 @@
 [ext_resource type="ArrayMesh" uid="uid://yeo16mokqi38" path="res://_/projet/Richard/Assets/Katana.obj" id="1_mo78c"]
 [ext_resource type="Texture2D" uid="uid://clyxu0qw5fjtn" path="res://_/projet/Richard/Assets/katanaTex.png" id="2_3m8lq"]
 [ext_resource type="Texture2D" uid="uid://vnxl0q7hjh15" path="res://_/projet/Richard/Assets/2D_writable_texture.png" id="4_3vitg"]
+[ext_resource type="PackedScene" uid="uid://btbbr057a83en" path="res://_/projet/_Jürgen/Scenes/position_du_sabre.tscn" id="5_1he0v"]
+[ext_resource type="Script" uid="uid://cp2mcj4870i2a" path="res://_/projet/_Jürgen/Scripts/relocated_point_of_katana.gd" id="6_reeod"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5eyr7"]
 albedo_texture = ExtResource("2_3m8lq")
@@ -61,10 +63,19 @@ _data = {
 &"up down": SubResource("Animation_30psc")
 }
 
+[sub_resource type="ViewportTexture" id="ViewportTexture_7eux6"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d2efr"]
+resource_local_to_scene = true
+transparency = 1
+albedo_color = Color(0.56078434, 0.7372549, 0.5254902, 1)
+albedo_texture = SubResource("ViewportTexture_7eux6")
+
 [node name="KatanaPaint" type="Node3D" unique_id=1609574989]
 
 [node name="Katana" type="Node3D" parent="." unique_id=1135263213 node_paths=PackedStringArray("raycast_line", "debug_point")]
-transform = Transform3D(1, 0, 0, 0, -0.018726967, -0.99982464, 0, 0.99982464, -0.018726967, 0, 0.6912966, -0.5000831)
+transform = Transform3D(1, 0, 0, 0, -0.018726967, -0.99982464, 0, 0.99982464, -0.018726967, -0.0029023886, 0.6912966, -0.5000831)
 script = ExtResource("1_3m8lq")
 raycast_line = [NodePath("RayCast3D6"), NodePath("RayCast3D5"), NodePath("RayCast3D4"), NodePath("RayCast3D3"), NodePath("RayCast3D2"), NodePath("RayCast3D")]
 debug_point = NodePath("MeshInstance3D2")
@@ -141,4 +152,24 @@ transform = Transform3D(-0.6237283, 0.37718317, -0.68461376, 0.058172986, 0.8958
 [node name="DirectionalLight3D" type="SpotLight3D" parent="." unique_id=1176857340]
 transform = Transform3D(-0.98536646, -0.063394904, 0.15822142, 0, 0.9282614, 0.3719284, -0.17044921, 0.36648577, -0.9146777, 0, 1.4091115, -2.3790429)
 
+[node name="Scripts" type="Node3D" parent="." unique_id=380061227]
+
+[node name="PositionDuSabre" parent="Scripts" unique_id=704180931 instance=ExtResource("5_1he0v")]
+
+[node name="Script" parent="Scripts/PositionDuSabre" index="1" unique_id=835427384]
+point_of_katana = Vector3(0, 0, 0)
+
+[node name="Kanji_Support" parent="Scripts/PositionDuSabre/Quad" parent_id_path=PackedInt32Array(704180931, 458882736) index="0" unique_id=1440527393]
+surface_material_override/0 = SubResource("StandardMaterial3D_d2efr")
+
+[node name="RelocatedPointOfKatana" type="Node" parent="Scripts/PositionDuSabre/Percentage_Texture_Collision" parent_id_path=PackedInt32Array(704180931, 2101423386) index="0" unique_id=1985904353 node_paths=PackedStringArray("down_left", "top_right", "pixel_counter")]
+script = ExtResource("6_reeod")
+down_left = NodePath("../../Quad/down_left")
+top_right = NodePath("../../Quad/up_right")
+pixel_counter = NodePath("../../Script/PixelCounter")
+metadata/_custom_type_script = "uid://cp2mcj4870i2a"
+
+[connection signal="katana_collision_point" from="Katana" to="Scripts/PositionDuSabre/Percentage_Texture_Collision/RelocatedPointOfKatana" method="import_point_of_katana"]
 [connection signal="katana_is_touching" from="Katana" to="Katana/MeshInstance3D2" method="set_visible"]
+
+[editable path="Scripts/PositionDuSabre"]
