@@ -6,19 +6,17 @@ extends Node3D
 @export var debug_point_vector3:Vector3
 @export var brush_color:Color
 @export var clear_color:Color
-@export var pixel_position : Vector2i
+var pixel_position : Vector2i
 signal katana_is_touching(is_touching : bool)
 signal katana_collision_point(global_point : Vector3)
 signal on_drawing_called(image : Image)
 
-var brush : Array[Vector2i] = [Vector2i(0, 0)]
+var brush_radius : int 
 var draw : bool
 var clear : bool
 
-
-func draw_with_percent_top_down(percentage01_in_vector2 : Vector2i) :
-	push_error("not implemented yet")
-	pass
+func draw_with_percent_top_down(percentage01_in_vector2 : Vector3 ):
+	pixel_position = Vector2i(percentage01_in_vector2.x,percentage01_in_vector2.y)
 
 func button_press_to_draw_and_clear(name : String) -> void:
 	if name == "trigger":
@@ -74,4 +72,5 @@ func replace_texture(color : Color) -> void:
 	
 
 func _physics_process(delta):
-		replace_texture(brush_color)
+		replace_texture(Color.BLACK)
+		

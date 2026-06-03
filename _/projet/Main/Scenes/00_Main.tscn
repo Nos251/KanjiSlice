@@ -4,6 +4,17 @@
 [ext_resource type="PackedScene" uid="uid://njx823gyk04n" path="res://addons/godot-xr-tools/hands/scenes/highpoly/left_hand.tscn" id="2_nkhiv"]
 [ext_resource type="PackedScene" uid="uid://b4ysuy43poobf" path="res://addons/godot-xr-tools/functions/function_pickup.tscn" id="3_a5tr8"]
 [ext_resource type="PackedScene" uid="uid://raeeicvvindd" path="res://addons/godot-xr-tools/hands/scenes/highpoly/right_hand.tscn" id="4_jyuc4"]
+[ext_resource type="PackedScene" uid="uid://dyacvjwnggn08" path="res://_/projet/JP/Assets/Room_A/MSH_A_Door_A_Left.glb" id="5_w43sd"]
+[ext_resource type="PackedScene" uid="uid://di4277f1yxvl4" path="res://_/projet/JP/Assets/Room_A/MSH_A_Door_A_Right.glb" id="6_3g7qe"]
+[ext_resource type="PackedScene" uid="uid://cw4aa6v64kpjb" path="res://_/projet/JP/Assets/Room_A/MSH_A_Door_B_Left.glb" id="7_6lcmc"]
+[ext_resource type="PackedScene" uid="uid://y74dnyabc1x0" path="res://_/projet/JP/Assets/Room_A/MSH_A_Door_B_Right.glb" id="8_fw1hx"]
+[ext_resource type="PackedScene" uid="uid://clmjtekv36n5q" path="res://_/projet/JP/Assets/Room_A/MSH_A_Floor.glb" id="9_6cdbj"]
+[ext_resource type="PackedScene" uid="uid://4vniq1oks4jf" path="res://_/projet/JP/Assets/Room_A/MSH_A_Roof.glb" id="10_l8jg6"]
+[ext_resource type="PackedScene" uid="uid://fguj6dflkemw" path="res://_/projet/JP/Assets/Room_A/MSH_A_Wall_East.glb" id="11_4l8kl"]
+[ext_resource type="PackedScene" uid="uid://jjh5x7egioqf" path="res://_/projet/JP/Assets/Room_A/MSH_A_Wall_North.glb" id="12_y8ie3"]
+[ext_resource type="PackedScene" uid="uid://bvlt6l7f7pmre" path="res://_/projet/JP/Assets/Room_A/MSH_A_Wall_South.glb" id="13_sl3w0"]
+[ext_resource type="PackedScene" uid="uid://do7wnuhwoo1fw" path="res://_/projet/JP/Assets/Room_A/MSH_A_Wall_West.glb" id="14_cmlhl"]
+[ext_resource type="PackedScene" uid="uid://biv4mi3ykorpy" path="res://_/projet/Richard/Assets/Katana.fbx" id="15_3g7qe"]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_4fpwi"]
 animation = &"Grip"
@@ -69,10 +80,6 @@ node_connections = [&"output", 0, &"Grip", &"Grip", 0, &"Trigger", &"Grip", 1, &
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_6lcmc"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_fw1hx"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_6cdbj"]
-
 [node name="Main" type="Node3D" unique_id=1507949371]
 
 [node name="XREssentials" type="Node3D" parent="." unique_id=690138236]
@@ -81,6 +88,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.82610714)
 [node name="XROrigin3D" type="XROrigin3D" parent="XREssentials" unique_id=9835221]
 
 [node name="XRCamera3D" type="XRCamera3D" parent="XREssentials/XROrigin3D" unique_id=1606182718]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0059993267, 0, 0)
 
 [node name="XR_LeftHand" type="XRController3D" parent="XREssentials/XROrigin3D" unique_id=1813781587]
 tracker = &"left_hand"
@@ -113,6 +121,9 @@ bones/20/rotation = Quaternion(-0.09173688, 0.020302717, -0.010182976, 0.9955242
 bones/21/rotation = Quaternion(-0.06251818, -0.00022572002, -0.115392834, 0.99135065)
 bones/22/rotation = Quaternion(0.058578636, 0.021648303, -0.26990518, 0.9608596)
 bones/23/rotation = Quaternion(0.006871769, -0.0035727466, -0.21195254, 0.97724926)
+
+[node name="mesh_Hand_Nails_L" parent="XREssentials/XROrigin3D/XR_LeftHand/XRToolsCollisionHand/LeftHand/Hand_Nails_L/Armature/Skeleton3D" index="0" unique_id=1765247048]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0059993267, 0, 0)
 
 [node name="AnimationTree" parent="XREssentials/XROrigin3D/XR_LeftHand/XRToolsCollisionHand/LeftHand" index="1"]
 root_node = NodePath("../Hand_Nails_L")
@@ -151,6 +162,9 @@ bones/21/rotation = Quaternion(-0.06251817, 0.00022572096, 0.115392834, 0.991350
 bones/22/rotation = Quaternion(0.058578644, -0.021648303, 0.26990518, 0.9608596)
 bones/23/rotation = Quaternion(0.0068717655, 0.0035727452, 0.21195254, 0.97724926)
 
+[node name="mesh_Hand_Nails_R" parent="XREssentials/XROrigin3D/XR_RightHand/XRToolsCollisionHand/RightHand/Hand_Nails_R/Armature/Skeleton3D" index="0" unique_id=1252724598]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0059993267, 0, 0)
+
 [node name="AnimationTree" parent="XREssentials/XROrigin3D/XR_RightHand/XRToolsCollisionHand/RightHand" index="1"]
 root_node = NodePath("../Hand_Nails_R")
 tree_root = SubResource("AnimationNodeBlendTree_3g7qe")
@@ -158,25 +172,68 @@ tree_root = SubResource("AnimationNodeBlendTree_3g7qe")
 [node name="FunctionPickup" parent="XREssentials/XROrigin3D/XR_RightHand/XRToolsCollisionHand/RightHand" unique_id=617249944 instance=ExtResource("3_a5tr8")]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="XREssentials" unique_id=815835814]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0059993267, 0, 0)
 
 [node name="Decoration" type="Node3D" parent="." unique_id=1404429663]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.5)
 
-[node name="Floor" type="StaticBody3D" parent="Decoration" unique_id=1513159115]
+[node name="MSH_A_Floor" parent="Decoration" unique_id=114949447 instance=ExtResource("9_6cdbj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.523442, 0, 3.5)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Decoration/Floor" unique_id=1289443386]
+[node name="Floor" type="StaticBody3D" parent="Decoration/MSH_A_Floor" unique_id=1513159115]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.523442, 0, -3.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Decoration/MSH_A_Floor/Floor" unique_id=1289443386]
 shape = SubResource("WorldBoundaryShape3D_6lcmc")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Decoration" unique_id=163988262]
+[node name="MSH_A_Wall_West" parent="Decoration" unique_id=2129635401 instance=ExtResource("14_cmlhl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5294414, 0, 3.5)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Decoration/StaticBody3D" unique_id=47560303]
-transform = Transform3D(7, 0, 0, 0, 2.5, 0, 0, 0, 0.1, 0, 0, 0)
-shape = SubResource("BoxShape3D_fw1hx")
+[node name="West" type="StaticBody3D" parent="Decoration/MSH_A_Wall_West" unique_id=1269264559]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.16680336, 1.2730734, -0.019361496)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Decoration/StaticBody3D/CollisionShape3D" unique_id=532865628]
-mesh = SubResource("BoxMesh_6cdbj")
-skeleton = NodePath("../..")
+[node name="MSH_A_Door_A_Left" parent="Decoration" unique_id=729223601 instance=ExtResource("5_w43sd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4699836, 0, 2.3886855)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Decoration/MSH_A_Door_A_Left" unique_id=585815444]
+
+[node name="MSH_A_Door_A_Right" parent="Decoration" unique_id=818938432 instance=ExtResource("6_3g7qe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5516324, 0, 4.6338344)
+
+[node name="MSH_A_Door_B_Left" parent="Decoration" unique_id=1554762216 instance=ExtResource("7_6lcmc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.523442, 0, 3.5)
+
+[node name="MSH_A_Door_B_Right" parent="Decoration" unique_id=931351948 instance=ExtResource("8_fw1hx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.523442, 0, 3.5)
+
+[node name="MSH_A_Roof" parent="Decoration" unique_id=1687880820 instance=ExtResource("10_l8jg6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5294414, 0, 3.5)
+
+[node name="Roof" type="StaticBody3D" parent="Decoration/MSH_A_Roof" unique_id=356812358]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 3.5294414, 2.5475004, 2.167027)
+
+[node name="MSH_A_Wall_East" parent="Decoration" unique_id=1231867617 instance=ExtResource("11_4l8kl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.523442, 0, 3.5)
+
+[node name="East" type="StaticBody3D" parent="Decoration/MSH_A_Wall_East" unique_id=328991592]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.1397505, 1.2730734, -0.019361496)
+
+[node name="MSH_A_Wall_North" parent="Decoration" unique_id=1725264336 instance=ExtResource("12_y8ie3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5294414, 0, 3.5)
+
+[node name="North" type="StaticBody3D" parent="Decoration/MSH_A_Wall_North" unique_id=163988262]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5294414, 1.2730734, -3.5)
+
+[node name="MSH_A_Wall_South" parent="Decoration" unique_id=588820815 instance=ExtResource("13_sl3w0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.523442, 0, 3.5)
+
+[node name="South" type="StaticBody3D" parent="Decoration/MSH_A_Wall_South" unique_id=461629695]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.523442, 1.2730734, 3.498158)
 
 [node name="Scripts" type="Node3D" parent="." unique_id=1396626740]
+
+[node name="Katana" parent="." unique_id=1670665521 instance=ExtResource("15_3g7qe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2380967, 0)
 
 [editable path="XREssentials/XROrigin3D/XR_LeftHand/XRToolsCollisionHand/LeftHand"]
 [editable path="XREssentials/XROrigin3D/XR_LeftHand/XRToolsCollisionHand/LeftHand/Hand_Nails_L"]

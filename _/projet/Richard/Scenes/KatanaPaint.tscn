@@ -79,6 +79,8 @@ transform = Transform3D(1, 0, 0, 0, -0.018726967, -0.99982464, 0, 0.99982464, -0
 script = ExtResource("1_3m8lq")
 raycast_line = [NodePath("RayCast3D6"), NodePath("RayCast3D5"), NodePath("RayCast3D4"), NodePath("RayCast3D3"), NodePath("RayCast3D2"), NodePath("RayCast3D")]
 debug_point = NodePath("MeshInstance3D2")
+debug_point_vector3 = null
+brush_color = null
 clear_color = Color(1, 1, 1, 1)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Katana" unique_id=1032948131]
@@ -133,6 +135,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_ktqcq")
 transform = Transform3D(-0.9925221, 0, 0.12206475, 0, 1, 0, -0.12206475, 0, -0.9925221, 0, 0, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D2/Anchor" unique_id=1441852178]
+layers = 3
 mesh = SubResource("QuadMesh_nmnny")
 skeleton = NodePath("StaticBody3D")
 
@@ -147,7 +150,7 @@ libraries/ = SubResource("AnimationLibrary_apnx7")
 autoplay = &"up down"
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=593476175]
-transform = Transform3D(-0.6237283, 0.37718317, -0.68461376, 0.058172986, 0.89583814, 0.44055638, 0.77947354, 0.23496144, -0.5807014, -0.8215513, 0.6928691, -0.6833173)
+transform = Transform3D(-0.99651754, 0.07851671, -0.028073292, 0.05817299, 0.8958382, 0.44055638, 0.059740163, 0.43738905, -0.8972859, -0.13153934, 1.1465588, -1.1656736)
 
 [node name="DirectionalLight3D" type="SpotLight3D" parent="." unique_id=1176857340]
 transform = Transform3D(-0.98536646, -0.063394904, 0.15822142, 0, 0.9282614, 0.3719284, -0.17044921, 0.36648577, -0.9146777, 0, 1.4091115, -2.3790429)
@@ -155,6 +158,10 @@ transform = Transform3D(-0.98536646, -0.063394904, 0.15822142, 0, 0.9282614, 0.3
 [node name="Scripts" type="Node3D" parent="." unique_id=380061227]
 
 [node name="PositionDuSabre" parent="Scripts" unique_id=704180931 instance=ExtResource("5_1he0v")]
+visible = false
+
+[node name="Sprite2D" parent="Scripts/PositionDuSabre/SubViewport" parent_id_path=PackedInt32Array(704180931, 240347611) index="0" unique_id=1459200077]
+visible = false
 
 [node name="Script" parent="Scripts/PositionDuSabre" index="1" unique_id=835427384]
 point_of_katana = Vector3(0, 0, 0)
@@ -171,5 +178,6 @@ metadata/_custom_type_script = "uid://cp2mcj4870i2a"
 
 [connection signal="katana_collision_point" from="Katana" to="Scripts/PositionDuSabre/Percentage_Texture_Collision/RelocatedPointOfKatana" method="import_point_of_katana"]
 [connection signal="katana_is_touching" from="Katana" to="Katana/MeshInstance3D2" method="set_visible"]
+[connection signal="local_percentage_emit" from="Scripts/PositionDuSabre/Percentage_Texture_Collision/RelocatedPointOfKatana" to="Katana" method="draw_with_percent_top_down"]
 
 [editable path="Scripts/PositionDuSabre"]
