@@ -1,10 +1,11 @@
 class_name RelocatedPointOfKatana
+
 extends Node
 signal local_percentage_emit(vector3: Vector3)
 signal on_local_position_debug(text:String)
 @export var down_left : Node3D 
 @export var top_right : Node3D 
-@export var point_of_katana : Node3D 
+@export var point_of_katana : Vector3 
 @export var local_position_of_katana : Vector3
 @export var local_position_of_katana_unity : Vector3
 @export var local_width_height : Vector3
@@ -22,7 +23,11 @@ var origin_pixel_black : int
 @export var katana_percentage_x : float
 @export var katana_percentage_y : float
 # Called when the node enters the scene tree for the first time.
+
+func import_point_of_katana(katana : Vector3):
+	point_of_katana = katana
 func _ready() -> void:
+	
 	mon_calque = pixel_counter.kanji_easy
 	stats = pixel_counter.analyze_layer_pixels(mon_calque)
 	
@@ -41,7 +46,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 
-	local_position_of_katana = relocate_global_to_local(point_of_katana.global_position)
+	local_position_of_katana = relocate_global_to_local(point_of_katana)
 	DebugDraw3D.draw_line(Vector3(0,0,0),local_position_of_katana,Color.YELLOW)
 	
 	DebugDraw3D.draw_line(Vector3(0,0,0),Vector3(1,0,0),Color.RED)
