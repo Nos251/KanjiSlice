@@ -25,6 +25,10 @@ run/main_scene.pc="uid://dbeb7yij08a0k"
 XRToolsUserSettings="*uid://bqgb8i74tm0t"
 XRToolsRumbleManager="*uid://by853dk86g1qw"
 
+[debug_draw_3d]
+
+settings/addon_root_folder="res://addons/addons/debug_draw_3d"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/godot-xr-tools/plugin.cfg")
