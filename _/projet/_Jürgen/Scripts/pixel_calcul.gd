@@ -1,18 +1,22 @@
 class_name PixelCounter
 extends Node
 
-@export var kanji_easy : Texture2D
+@export var liste_kanji : Array[Texture2D] = []
 @export var sprite2d : Sprite2D
 static var sprite2d_static : Sprite2D
+var kanji : Texture2D
 
 func _enter_tree() -> void:
 	sprite2d_static = sprite2d
-	sprite2d.texture = kanji_easy
-
+	if not liste_kanji.is_empty():
+		# Sélection aléatoire de la texture dans la liste
+		kanji = liste_kanji.pick_random()
+		sprite2d.texture = kanji
+	else:
+		push_error("PixelCounter: La liste_kanji est vide dans l'inspecteur !")
 func _ready() -> void:
-	analyze_layer_pixels(kanji_easy)
-## Compte les pixels d'une texture selon des critères de couleur et d'alpha.
-## Retourne un Dictionary contenant les résultats.
+	if kanji:
+		analyze_layer_pixels(kanji)
 static func analyze_layer_pixels(texture: Texture2D, alpha_threshold: float = 0.05, black_threshold: float = 0.05) -> Dictionary:	
 	var result = {
 		"total_pixels": 0,

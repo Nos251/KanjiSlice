@@ -10,7 +10,9 @@ signal on_local_position_debug(text:String)
 @export var local_position_of_katana_unity : Vector3
 @export var local_width_height : Vector3
 @export var pixel_counter : PixelCounter
-
+@export var points_for_kanji_cut_in_percent : float
+@export var bonus_point_based_on_alpha : float
+@export var total_score_in_percent : float
 var mon_calque : Texture2D
 var stats : Dictionary
 var end_pixel_alpha : int
@@ -18,7 +20,7 @@ var end_pixel_black : int
 var origin_pixel_alpha : int
 var origin_pixel_black : int
 @export var remaining_pixels_in_pourcent : float
-@export var offset_malus : float
+@export var bonus_point_alpha : float
 
 @export var katana_percentage_x : float
 @export var katana_percentage_y : float
@@ -28,7 +30,7 @@ func import_point_of_katana(katana : Vector3):
 	point_of_katana = katana
 func _ready() -> void:
 	
-	mon_calque = pixel_counter.kanji_easy
+	mon_calque = pixel_counter.kanji
 	stats = pixel_counter.analyze_layer_pixels(mon_calque)
 	
 	print("--- Analyse du Calque ---")
@@ -42,7 +44,7 @@ func _ready() -> void:
 	
 	print("Original Pixel Invisible : ", origin_pixel_alpha)
 	print("Original Pixel Black :", origin_pixel_black)
-
+	end_of_level_script()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 
@@ -92,9 +94,14 @@ func end_of_level_script():
 	#Calcul pourcentage for pixel colored black and alpha.
 	end_pixel_alpha = stats["transparent_pixels"]
 	end_pixel_black = stats["black_pixels"]
-	offset_malus = (float(end_pixel_alpha)/float(origin_pixel_alpha))*100 
+	bonus_point_alpha = (float(origin_pixel_alpha)/float(end_pixel_alpha))*100 
 	remaining_pixels_in_pourcent = (float(end_pixel_black)/float(origin_pixel_black))*100
+	points_for_kanji_cut_in_percent = 100 - remaining_pixels_in_pourcent
+	bonus_point_based_on_alpha = bonus_point_alpha
+	total_score_in_percent = (bonus_point_based_on_alpha + points_for_kanji_cut_in_percent)/2
 	#(terminer la fonction en calculant le % de reussite 100 - offset,... et ensuite addition des deux et mise
+	
+	total_score_in_percent = int(total_score_in_percent)
 	
 	
 	

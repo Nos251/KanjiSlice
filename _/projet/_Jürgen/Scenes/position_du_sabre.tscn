@@ -1,9 +1,13 @@
 [gd_scene format=3 uid="uid://btbbr057a83en"]
 
 [ext_resource type="Script" uid="uid://cp2mcj4870i2a" path="res://_/projet/_Jürgen/Scripts/relocated_point_of_katana.gd" id="1_1epjq"]
-[ext_resource type="Texture2D" uid="uid://d2l3v1ocww3ee" path="res://_/projet/_Jürgen/Assets/Kanji/Difficile/Black.svg" id="1_ph73b"]
+[ext_resource type="Texture2D" uid="uid://dbkk4wtodth2h" path="res://_/projet/_Jürgen/Assets/Kanji/Facile/Stand_Up.svg" id="1_eqtvh"]
+[ext_resource type="Texture2D" uid="uid://cvax5ydcao40e" path="res://_/projet/_Jürgen/Assets/Kanji/Facile/Fire.svg" id="3_ak6ka"]
 [ext_resource type="Script" uid="uid://6p73hmdhwtbv" path="res://_/projet/_Jürgen/Scripts/pixel_calcul.gd" id="3_eqtvh"]
-[ext_resource type="Script" uid="uid://ir1g0akkr1f8" path="res://_/projet/_Jürgen/Scenes/percentage_texture_collision.gd" id="4_ph73b"]
+[ext_resource type="Texture2D" uid="uid://b8wk6j44fghpy" path="res://_/projet/_Jürgen/Assets/Kanji/Facile/Period.svg" id="4_ph73b"]
+[ext_resource type="Texture2D" uid="uid://dfuf8wkj3qtt7" path="res://_/projet/_Jürgen/Assets/Kanji/Facile/Six.svg" id="5_h5gec"]
+[ext_resource type="Texture2D" uid="uid://c5nsnmbbci604" path="res://_/projet/_Jürgen/Assets/Kanji/Facile/Talent.svg" id="7_jq8r1"]
+[ext_resource type="Script" uid="uid://ir1g0akkr1f8" path="res://_/projet/_Jürgen/Scenes/percentage_texture_collision.gd" id="8_5r4q8"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_eqtvh"]
 
@@ -71,16 +75,15 @@ render_target_update_mode = 4
 [node name="Sprite2D" type="Sprite2D" parent="SubViewport" unique_id=1459200077]
 centered = false
 
-[node name="Script" type="Node" parent="." unique_id=835427384 node_paths=PackedStringArray("down_left", "top_right", "point_of_katana", "pixel_counter")]
+[node name="Script" type="Node" parent="." unique_id=835427384 node_paths=PackedStringArray("down_left", "top_right", "pixel_counter")]
 script = ExtResource("1_1epjq")
 down_left = NodePath("../Quad/down_left")
 top_right = NodePath("../Quad/up_right")
-point_of_katana = NodePath("../MeshInstance3D2/Node3D")
 pixel_counter = NodePath("PixelCounter")
 
 [node name="PixelCounter" type="Node" parent="Script" unique_id=1151370069 node_paths=PackedStringArray("sprite2d")]
 script = ExtResource("3_eqtvh")
-kanji_easy = ExtResource("1_ph73b")
+liste_kanji = Array[Texture2D]([ExtResource("3_ak6ka"), ExtResource("4_ph73b"), ExtResource("5_h5gec"), ExtResource("1_eqtvh"), ExtResource("7_jq8r1")])
 sprite2d = NodePath("../../SubViewport/Sprite2D")
 metadata/_custom_type_script = "uid://6p73hmdhwtbv"
 
@@ -133,6 +136,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0.5)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, -0.5)
 
 [node name="Percentage_Texture_Collision" type="Node" parent="." unique_id=2101423386]
-script = ExtResource("4_ph73b")
+script = ExtResource("8_5r4q8")
 
 [connection signal="on_local_position_debug" from="Script" to="Label3D" method="set_text"]

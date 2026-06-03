@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://cvf8letehlo3c"]
+
+[ext_resource type="PackedScene" uid="uid://btbbr057a83en" path="res://_/projet/_Jürgen/Scenes/position_du_sabre.tscn" id="1_h3ebw"]
+[ext_resource type="Texture2D" uid="uid://k14wuqyyopbf" path="res://_/projet/_Jürgen/Assets/Kanji/Moyen/Flower.svg" id="2_g55rr"]
+[ext_resource type="Texture2D" uid="uid://bp7sdi7i7gl8w" path="res://_/projet/_Jürgen/Assets/Kanji/Moyen/Gold.svg" id="3_f3c3v"]
+[ext_resource type="Texture2D" uid="uid://d38y0gwmu4dq1" path="res://_/projet/_Jürgen/Assets/Kanji/Moyen/Many.svg" id="4_7v2bx"]
+[ext_resource type="Texture2D" uid="uid://bde8x7ivbo4uc" path="res://_/projet/_Jürgen/Assets/Kanji/Moyen/Temple.svg" id="5_0wxvp"]
+[ext_resource type="Texture2D" uid="uid://c7bcx2641b1mr" path="res://_/projet/_Jürgen/Assets/Kanji/Moyen/Trillion.svg" id="6_wh8yn"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_klspp"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l73e3"]
+resource_local_to_scene = true
+transparency = 1
+albedo_color = Color(0.56078434, 0.7372549, 0.5254902, 1)
+albedo_texture = SubResource("ViewportTexture_klspp")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_h3ebw"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g55rr"]
+resource_local_to_scene = true
+transparency = 1
+albedo_color = Color(0.56078434, 0.7372549, 0.5254902, 1)
+albedo_texture = SubResource("ViewportTexture_h3ebw")
+
+[node name="Node3D" type="Node3D" unique_id=937942174]
+
+[node name="PositionDuSabre" parent="." unique_id=704180931 instance=ExtResource("1_h3ebw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8128911, 0, 0)
+
+[node name="PixelCounter" parent="PositionDuSabre/Script" parent_id_path=PackedInt32Array(704180931, 835427384) index="0" unique_id=1151370069]
+liste_kanji = Array[Texture2D]([ExtResource("2_g55rr"), ExtResource("3_f3c3v"), ExtResource("4_7v2bx"), ExtResource("5_0wxvp"), ExtResource("6_wh8yn")])
+
+[node name="Camera3D" parent="PositionDuSabre/Node3D/Pivot" parent_id_path=PackedInt32Array(704180931, 1693644126) index="0" unique_id=1686985493]
+transform = Transform3D(0.90328294, -0.15810925, 0.3988502, 0, 0.92962223, 0.36851397, -0.4290455, -0.33287236, 0.83971184, 1.5388087, 0.92210174, 0.98383564)
+
+[node name="Kanji_Support" parent="PositionDuSabre/Quad" parent_id_path=PackedInt32Array(704180931, 458882736) index="0" unique_id=1440527393]
+surface_material_override/0 = SubResource("StandardMaterial3D_l73e3")
+
+[node name="PositionDuSabre2" parent="." unique_id=92280100 instance=ExtResource("1_h3ebw")]
+
+[node name="Camera3D" parent="PositionDuSabre2/Node3D/Pivot" parent_id_path=PackedInt32Array(92280100, 1693644126) index="0" unique_id=1686985493]
+visible = false
+
+[node name="Kanji_Support" parent="PositionDuSabre2/Quad" parent_id_path=PackedInt32Array(92280100, 458882736) index="0" unique_id=1440527393]
+surface_material_override/0 = SubResource("StandardMaterial3D_g55rr")
+
+[editable path="PositionDuSabre"]
+[editable path="PositionDuSabre2"]
