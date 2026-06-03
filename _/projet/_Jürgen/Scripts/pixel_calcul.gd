@@ -1,9 +1,19 @@
 class_name PixelCounter
 extends Node
 
+@export var kanji_easy : Texture2D
+@export var sprite2d : Sprite2D
+static var sprite2d_static : Sprite2D
+
+func _enter_tree() -> void:
+	sprite2d_static = sprite2d
+	sprite2d.texture = kanji_easy
+
+func _ready() -> void:
+	analyze_layer_pixels(kanji_easy)
 ## Compte les pixels d'une texture selon des critères de couleur et d'alpha.
 ## Retourne un Dictionary contenant les résultats.
-static func analyze_layer_pixels(texture: Texture2D, alpha_threshold: float = 0.05, black_threshold: float = 0.05) -> Dictionary:
+static func analyze_layer_pixels(texture: Texture2D, alpha_threshold: float = 0.05, black_threshold: float = 0.05) -> Dictionary:	
 	var result = {
 		"total_pixels": 0,
 		"transparent_pixels": 0,
@@ -16,19 +26,21 @@ static func analyze_layer_pixels(texture: Texture2D, alpha_threshold: float = 0.
 		push_error("PixelCounter: La texture fournie est vide (null).")
 		return result
 		
-	# Extraire l'image de la texture pour pouvoir lire les pixels sur le CPU
-	var image: Image = texture.get_image()
-	if image.is_empty():
+	var original_image : Image = texture.get_image()
+	if original_image.is_empty():
 		return result
-		
-	var width = image.get_width()
-	var height = image.get_height()
+	
+	var img : Image = original_image.duplicate()
+	img.decompress()
+	
+	var width = img.get_width()
+	var height = img.get_height()
 	result["total_pixels"] = width * height
 	
 	# Parcours de tous les pixels de l'image
 	for y in range(height):
 		for x in range(width):
-			var pixel_color: Color = image.get_pixel(x, y)
+			var pixel_color: Color = img.get_pixel(x, y)
 			
 			# 1. Vérification de l'Alpha (Transparence)
 			if pixel_color.a <= alpha_threshold:

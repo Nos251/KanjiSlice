@@ -1,11 +1,9 @@
 [gd_scene format=3 uid="uid://btbbr057a83en"]
 
 [ext_resource type="Script" uid="uid://cp2mcj4870i2a" path="res://_/projet/_Jürgen/Scripts/relocated_point_of_katana.gd" id="1_1epjq"]
-[ext_resource type="Texture2D" uid="uid://dbkk4wtodth2h" path="res://_/projet/_Jürgen/Assets/Kanji/Facile/Stand_Up.svg" id="1_eqtvh"]
+[ext_resource type="Texture2D" uid="uid://d2l3v1ocww3ee" path="res://_/projet/_Jürgen/Assets/Kanji/Difficile/Black.svg" id="1_ph73b"]
 [ext_resource type="Script" uid="uid://6p73hmdhwtbv" path="res://_/projet/_Jürgen/Scripts/pixel_calcul.gd" id="3_eqtvh"]
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_qq3yi"]
-viewport_path = NodePath("SubViewport")
+[ext_resource type="Script" uid="uid://ir1g0akkr1f8" path="res://_/projet/_Jürgen/Scenes/percentage_texture_collision.gd" id="4_ph73b"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_eqtvh"]
 
@@ -71,25 +69,30 @@ size = Vector2i(220, 220)
 render_target_update_mode = 4
 
 [node name="Sprite2D" type="Sprite2D" parent="SubViewport" unique_id=1459200077]
-texture = ExtResource("1_eqtvh")
 centered = false
 
-[node name="Script" type="Node" parent="." unique_id=835427384 node_paths=PackedStringArray("down_left", "top_right", "point_of_katana")]
+[node name="Script" type="Node" parent="." unique_id=835427384 node_paths=PackedStringArray("down_left", "top_right", "point_of_katana", "pixel_counter")]
 script = ExtResource("1_1epjq")
 down_left = NodePath("../Quad/down_left")
 top_right = NodePath("../Quad/up_right")
 point_of_katana = NodePath("../MeshInstance3D2/Node3D")
-mon_calque = SubResource("ViewportTexture_qq3yi")
+pixel_counter = NodePath("PixelCounter")
+
+[node name="PixelCounter" type="Node" parent="Script" unique_id=1151370069 node_paths=PackedStringArray("sprite2d")]
+script = ExtResource("3_eqtvh")
+kanji_easy = ExtResource("1_ph73b")
+sprite2d = NodePath("../../SubViewport/Sprite2D")
+metadata/_custom_type_script = "uid://6p73hmdhwtbv"
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1448721934]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 1, -0.056004524, 0.9327712, -0.1680271)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 1, -0.056004524, 0.7584158, -0.16725647)
 mesh = SubResource("BoxMesh_eqtvh")
 
 [node name="Node3D" type="Node3D" parent="MeshInstance3D2" unique_id=1443108155]
 transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0, 0, -0.4682714)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D2/Node3D" unique_id=1792805247]
-transform = Transform3D(2.44, 0, 0, 0, 1.815, 0, 0, 0, 0.169, 0, 0, 0)
+transform = Transform3D(2.44, 0, 0, 0, 1.815, 0, 0, 0, 0.169, 0, 0, 0.06477612)
 mesh = SubResource("SphereMesh_1epjq")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=31015759]
@@ -114,13 +117,13 @@ text = "Test"
 [node name="Quad" type="Node3D" parent="." unique_id=458882736]
 transform = Transform3D(0.5, 0, 0, 0, 0.29928118, -0.40053812, 0, 0.40053812, 0.29928118, 0.051255047, 0.763603, -0.5387547)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Quad" unique_id=1440527393]
+[node name="Kanji_Support" type="MeshInstance3D" parent="Quad" unique_id=1440527393]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
 mesh = SubResource("QuadMesh_vkkdf")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_qq3yi")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Quad/MeshInstance3D" unique_id=774543242]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Quad/Kanji_Support" unique_id=774543242]
 mesh = SubResource("QuadMesh_wyo0h")
 
 [node name="down_left" type="Node3D" parent="Quad" unique_id=528428305]
@@ -129,9 +132,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0.5)
 [node name="up_right" type="Node3D" parent="Quad" unique_id=1145692029]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, -0.5)
 
-[node name="Node" type="Node" parent="." unique_id=1367041321]
-script = ExtResource("3_eqtvh")
-
-[node name="Node2" type="Node" parent="." unique_id=2101423386]
+[node name="Percentage_Texture_Collision" type="Node" parent="." unique_id=2101423386]
+script = ExtResource("4_ph73b")
 
 [connection signal="on_local_position_debug" from="Script" to="Label3D" method="set_text"]
