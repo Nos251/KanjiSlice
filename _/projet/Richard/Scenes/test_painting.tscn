@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://btt1r0otd0m5b"]
+
+[ext_resource type="PackedScene" uid="uid://b8k0n7i8wwixf" path="res://_/projet/Richard/Scenes/KatanaPaint.tscn" id="1_312he"]
+
+[node name="Test_painting" type="Node3D" unique_id=1619817076]
+
+[node name="KatanaPaint2" parent="." unique_id=1609574989 instance=ExtResource("1_312he")]
+
+[editable path="KatanaPaint2"]

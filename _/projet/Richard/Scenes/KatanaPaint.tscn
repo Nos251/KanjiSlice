@@ -1,10 +1,9 @@
 [gd_scene format=3 uid="uid://b8k0n7i8wwixf"]
 
-[ext_resource type="Script" uid="uid://b2r4u17q7k0oh" path="res://_/projet/Richard/Scripts/KatanaRaycastToPoint.gd" id="1_3m8lq"]
+[ext_resource type="Script" uid="uid://b2r4u17q7k0oh" path="res://_/projet/Richard/Scripts/katana_raycast_to_point.gd" id="1_3m8lq"]
 [ext_resource type="ArrayMesh" uid="uid://yeo16mokqi38" path="res://_/projet/Richard/Assets/Katana.obj" id="1_mo78c"]
 [ext_resource type="Texture2D" uid="uid://clyxu0qw5fjtn" path="res://_/projet/Richard/Assets/katanaTex.png" id="2_3m8lq"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_ktqcq"]
+[ext_resource type="Texture2D" uid="uid://vnxl0q7hjh15" path="res://_/projet/Richard/Assets/2D_writable_texture.png" id="4_3vitg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5eyr7"]
 albedo_texture = ExtResource("2_3m8lq")
@@ -15,13 +14,14 @@ albedo_texture = ExtResource("2_3m8lq")
 shading_mode = 0
 albedo_color = Color(1, 0, 0, 1)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_5eyr7"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3vitg"]
+albedo_texture = ExtResource("4_3vitg")
 
-[sub_resource type="BoxMesh" id="BoxMesh_fx2ku"]
+[sub_resource type="QuadMesh" id="QuadMesh_nmnny"]
+material = SubResource("StandardMaterial3D_3vitg")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y8biq"]
-transparency = 1
-albedo_color = Color(1, 1, 1, 0.40784314)
+[sub_resource type="BoxShape3D" id="BoxShape3D_3vitg"]
+size = Vector3(1, 1, 0.019470215)
 
 [sub_resource type="Animation" id="Animation_ckaau"]
 length = 0.001
@@ -63,15 +63,12 @@ _data = {
 
 [node name="KatanaPaint" type="Node3D" unique_id=1609574989]
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1881865162]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.51192784, 0)
-visible = false
-mesh = SubResource("BoxMesh_ktqcq")
-
 [node name="Katana" type="Node3D" parent="." unique_id=1135263213 node_paths=PackedStringArray("raycast_line", "debug_point")]
+transform = Transform3D(1, 0, 0, 0, -0.018726967, -0.99982464, 0, 0.99982464, -0.018726967, 0, 0.6912966, -0.5000831)
 script = ExtResource("1_3m8lq")
 raycast_line = [NodePath("RayCast3D6"), NodePath("RayCast3D5"), NodePath("RayCast3D4"), NodePath("RayCast3D3"), NodePath("RayCast3D2"), NodePath("RayCast3D")]
 debug_point = NodePath("MeshInstance3D2")
+clear_color = Color(1, 1, 1, 1)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Katana" unique_id=1032948131]
 transform = Transform3D(0.14, 0, 0, 0, 0.14, 0, 0, 0, 0.14, 0, -0.1281094, -0.119844705)
@@ -122,24 +119,26 @@ surface_material_override/0 = SubResource("StandardMaterial3D_ktqcq")
 [node name="Node3D2" type="Node3D" parent="." unique_id=1137499325]
 
 [node name="Anchor" type="Node3D" parent="Node3D2" unique_id=88601096]
+transform = Transform3D(-0.9925221, 0, 0.12206475, 0, 1, 0, -0.12206475, 0, -0.9925221, 0, 0, 0)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Node3D2/Anchor" unique_id=1397914552]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D2/Anchor" unique_id=1441852178]
+mesh = SubResource("QuadMesh_nmnny")
+skeleton = NodePath("StaticBody3D")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D2/Anchor/StaticBody3D" unique_id=539114051]
-shape = SubResource("BoxShape3D_5eyr7")
+[node name="StaticBody3D" type="StaticBody3D" parent="Node3D2/Anchor/MeshInstance3D" unique_id=1397914552]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D2/Anchor/StaticBody3D" unique_id=1441852178]
-mesh = SubResource("BoxMesh_fx2ku")
-surface_material_override/0 = SubResource("StandardMaterial3D_y8biq")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D2/Anchor/MeshInstance3D/StaticBody3D" unique_id=1338952384]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0046081543)
+shape = SubResource("BoxShape3D_3vitg")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Node3D2" unique_id=1701183071]
 libraries/ = SubResource("AnimationLibrary_apnx7")
 autoplay = &"up down"
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=593476175]
-transform = Transform3D(0.5095091, 0, -0.8604653, 0, 1, 0, 0.8604653, 0, 0.5095091, -1.0587949, 0.6565106, 0.76087564)
+transform = Transform3D(-0.6237283, 0.37718317, -0.68461376, 0.058172986, 0.89583814, 0.44055638, 0.77947354, 0.23496144, -0.5807014, -0.8215513, 0.6928691, -0.6833173)
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2117628934]
-transform = Transform3D(1, 0, 0, 0, 0.9282614, 0.3719284, 0, -0.3719284, 0.9282614, 0, 1.4091115, 0.9931598)
+[node name="DirectionalLight3D" type="SpotLight3D" parent="." unique_id=1176857340]
+transform = Transform3D(-0.98536646, -0.063394904, 0.15822142, 0, 0.9282614, 0.3719284, -0.17044921, 0.36648577, -0.9146777, 0, 1.4091115, -2.3790429)
 
 [connection signal="katana_is_touching" from="Katana" to="Katana/MeshInstance3D2" method="set_visible"]
