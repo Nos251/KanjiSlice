@@ -33,6 +33,13 @@ settings/addon_root_folder="res://addons/addons/debug_draw_3d"
 
 enabled=PackedStringArray("res://addons/godot-xr-tools/plugin.cfg")
 
+[file_customization]
+
+folder_colors={
+"res://_/_ART/": "teal",
+"res://_/_DATAS/": "pink"
+}
+
 [filesystem]
 
 import/blender/enabled=false
