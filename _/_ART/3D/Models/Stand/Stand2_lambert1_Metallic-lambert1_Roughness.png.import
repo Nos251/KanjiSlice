@@ -3,9 +3,10 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://jd5fumbrct8v"
-path.s3tc="res://.godot/imported/Stand2_lambert1_Metallic-lambert1_Roughness.png-1d3a3fa3eafaa588d15c157eb3789828.s3tc.ctex"
+path.s3tc="res://.godot/imported/Stand2_lambert1_Metallic-lambert1_Roughness.png-af0c11985f66a108b7a821363c142f93.s3tc.ctex"
+path.etc2="res://.godot/imported/Stand2_lambert1_Metallic-lambert1_Roughness.png-af0c11985f66a108b7a821363c142f93.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -14,8 +15,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Stand/Stand2_lambert1_Metallic-lambert1_Roughness.png"
-dest_files=["res://.godot/imported/Stand2_lambert1_Metallic-lambert1_Roughness.png-1d3a3fa3eafaa588d15c157eb3789828.s3tc.ctex"]
+source_file="res://_/_ART/3D/Models/Stand/Stand2_lambert1_Metallic-lambert1_Roughness.png"
+dest_files=["res://.godot/imported/Stand2_lambert1_Metallic-lambert1_Roughness.png-af0c11985f66a108b7a821363c142f93.s3tc.ctex", "res://.godot/imported/Stand2_lambert1_Metallic-lambert1_Roughness.png-af0c11985f66a108b7a821363c142f93.etc2.ctex"]
 
 [params]
 

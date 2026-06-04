@@ -3,16 +3,17 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ughycvdyvuo5"
-path.s3tc="res://.godot/imported/Katana_LP-correctif_DefaultMaterial_Roughness.png-be5634adf4d49d6b106dcacfa59b63ae.s3tc.ctex"
+path.s3tc="res://.godot/imported/Katana_LP-correctif_DefaultMaterial_Roughness.png-479a0e2b32b5b74aff9395f502c93f6d.s3tc.ctex"
+path.etc2="res://.godot/imported/Katana_LP-correctif_DefaultMaterial_Roughness.png-479a0e2b32b5b74aff9395f502c93f6d.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
-source_file="res://Katana/Katana_LP-correctif_DefaultMaterial_Roughness.png"
-dest_files=["res://.godot/imported/Katana_LP-correctif_DefaultMaterial_Roughness.png-be5634adf4d49d6b106dcacfa59b63ae.s3tc.ctex"]
+source_file="res://_/_ART/3D/Models/Katana/Katana_LP-correctif_DefaultMaterial_Roughness.png"
+dest_files=["res://.godot/imported/Katana_LP-correctif_DefaultMaterial_Roughness.png-479a0e2b32b5b74aff9395f502c93f6d.s3tc.ctex", "res://.godot/imported/Katana_LP-correctif_DefaultMaterial_Roughness.png-479a0e2b32b5b74aff9395f502c93f6d.etc2.ctex"]
 
 [params]
 

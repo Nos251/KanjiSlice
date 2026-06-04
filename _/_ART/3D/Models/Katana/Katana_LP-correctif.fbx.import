@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bhd4fy33xnub2"
-path="res://.godot/imported/Katana_LP-correctif.fbx-41f526c833b3d943a498eceabef23233.scn"
+path="res://.godot/imported/Katana_LP-correctif.fbx-6b7dd447eee10abc5b8fd3c14989ef7a.scn"
 
 [deps]
 
-source_file="res://Katana/Katana_LP-correctif.fbx"
-dest_files=["res://.godot/imported/Katana_LP-correctif.fbx-41f526c833b3d943a498eceabef23233.scn"]
+source_file="res://_/_ART/3D/Models/Katana/Katana_LP-correctif.fbx"
+dest_files=["res://.godot/imported/Katana_LP-correctif.fbx-6b7dd447eee10abc5b8fd3c14989ef7a.scn"]
 
 [params]
 

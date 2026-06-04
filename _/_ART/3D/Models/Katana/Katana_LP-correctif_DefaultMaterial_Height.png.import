@@ -3,16 +3,17 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dw3qtqfplhpby"
-path.s3tc="res://.godot/imported/Katana_LP-correctif_DefaultMaterial_Height.png-2e6818860c4e8ed3a8658f5d51938616.s3tc.ctex"
+path.s3tc="res://.godot/imported/Katana_LP-correctif_DefaultMaterial_Height.png-0bfa2be106ab9f4e33d520b51cadf485.s3tc.ctex"
+path.etc2="res://.godot/imported/Katana_LP-correctif_DefaultMaterial_Height.png-0bfa2be106ab9f4e33d520b51cadf485.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
-source_file="res://Katana/Katana_LP-correctif_DefaultMaterial_Height.png"
-dest_files=["res://.godot/imported/Katana_LP-correctif_DefaultMaterial_Height.png-2e6818860c4e8ed3a8658f5d51938616.s3tc.ctex"]
+source_file="res://_/_ART/3D/Models/Katana/Katana_LP-correctif_DefaultMaterial_Height.png"
+dest_files=["res://.godot/imported/Katana_LP-correctif_DefaultMaterial_Height.png-0bfa2be106ab9f4e33d520b51cadf485.s3tc.ctex", "res://.godot/imported/Katana_LP-correctif_DefaultMaterial_Height.png-0bfa2be106ab9f4e33d520b51cadf485.etc2.ctex"]
 
 [params]
 

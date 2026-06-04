@@ -42,14 +42,14 @@ _data = {
 &"new_animation": SubResource("Animation_80fep")
 }
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_3vitg"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_nmnny"]
 viewport_path = NodePath("SubViewport")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_80fep"]
 resource_local_to_scene = true
 transparency = 1
 albedo_color = Color(0.56078434, 0.7372549, 0.5254902, 1)
-albedo_texture = SubResource("ViewportTexture_3vitg")
+albedo_texture = SubResource("ViewportTexture_nmnny")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nmnny"]
 
@@ -66,7 +66,9 @@ transform = Transform3D(-0.99735945, -0.07261058, 0.0013600151, 0.00071161985, -
 libraries/ = SubResource("AnimationLibrary_1he0v")
 autoplay = &"new_animation"
 
-[node name="DrawingBoard" parent="." unique_id=53190456 instance=ExtResource("2_nmnny")]
+[node name="DrawingBoard" parent="." unique_id=53190456 node_paths=PackedStringArray("painting_board") instance=ExtResource("2_nmnny")]
+clear_color = Color(1, 1, 1, 1)
+painting_board = NodePath("../Scripts/PositionDuSabre/Quad/Kanji_Support/DrawingMesh")
 
 [node name="DirectionalLight3D" type="SpotLight3D" parent="." unique_id=1176857340]
 transform = Transform3D(-0.98536646, -0.063394904, 0.15822142, 0, 0.9282614, 0.3719284, -0.17044921, 0.36648577, -0.9146777, 0, 1.4091115, -2.3790429)
@@ -80,7 +82,7 @@ transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 1, -1.8451089, 0.7584158, -0
 visible = false
 
 [node name="Quad" parent="Scripts/PositionDuSabre" index="6" unique_id=458882736]
-transform = Transform3D(0.5, 0, 0, 0, 0.29928118, -0.40053812, 0, 0.40053812, 0.29928118, 0.051255047, 0.4168378, -0.28366685)
+transform = Transform3D(0.5, 0, 0, 0, 0.29928118, -0.40053812, 0, 0.40053812, 0.29928118, 0.051255047, 0.4168378, -0.13645607)
 
 [node name="Kanji_Support" parent="Scripts/PositionDuSabre/Quad" index="0" unique_id=1440527393]
 surface_material_override/0 = SubResource("StandardMaterial3D_80fep")
@@ -96,5 +98,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_3vitg")
 
 [connection signal="katana_collision_point" from="Katana" to="Scripts/PositionDuSabre/Script" method="set_point_of_katana"]
 [connection signal="on_requested_texture" from="DrawingBoard" to="Scripts/PositionDuSabre/Script/PixelCounter" method="push_in_texture_to_analyze"]
+[connection signal="local_percentage_emit" from="Scripts/PositionDuSabre/Script" to="DrawingBoard" method="set_cursor_position"]
 
+[editable path="Katana"]
+[editable path="Katana/Katana_LP-correctif"]
 [editable path="Scripts/PositionDuSabre"]

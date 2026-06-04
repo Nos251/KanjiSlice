@@ -3,16 +3,17 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://emhp4s5o1vd3"
-path.s3tc="res://.godot/imported/Katana_LP-correctif_DefaultMaterial_Emissive.png-0e7bcbd545bede1328178f018fd4b2cf.s3tc.ctex"
+path.s3tc="res://.godot/imported/Katana_LP-correctif_DefaultMaterial_Emissive.png-000851a98de86b7ed8fda6abff275e1f.s3tc.ctex"
+path.etc2="res://.godot/imported/Katana_LP-correctif_DefaultMaterial_Emissive.png-000851a98de86b7ed8fda6abff275e1f.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
-source_file="res://Katana/Katana_LP-correctif_DefaultMaterial_Emissive.png"
-dest_files=["res://.godot/imported/Katana_LP-correctif_DefaultMaterial_Emissive.png-0e7bcbd545bede1328178f018fd4b2cf.s3tc.ctex"]
+source_file="res://_/_ART/3D/Models/Katana/Katana_LP-correctif_DefaultMaterial_Emissive.png"
+dest_files=["res://.godot/imported/Katana_LP-correctif_DefaultMaterial_Emissive.png-000851a98de86b7ed8fda6abff275e1f.s3tc.ctex", "res://.godot/imported/Katana_LP-correctif_DefaultMaterial_Emissive.png-000851a98de86b7ed8fda6abff275e1f.etc2.ctex"]
 
 [params]
 

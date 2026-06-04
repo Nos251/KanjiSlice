@@ -3,16 +3,17 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://lfuaumb3w57s"
-path.s3tc="res://.godot/imported/Katana_LP-correctif_DefaultMaterial_BaseColor.png-e11504ea56e51b12ae1ff0c83932974f.s3tc.ctex"
+path.s3tc="res://.godot/imported/Katana_LP-correctif_DefaultMaterial_BaseColor.png-a783717f9dc539d836078c65b7dd87ab.s3tc.ctex"
+path.etc2="res://.godot/imported/Katana_LP-correctif_DefaultMaterial_BaseColor.png-a783717f9dc539d836078c65b7dd87ab.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
-source_file="res://Katana/Katana_LP-correctif_DefaultMaterial_BaseColor.png"
-dest_files=["res://.godot/imported/Katana_LP-correctif_DefaultMaterial_BaseColor.png-e11504ea56e51b12ae1ff0c83932974f.s3tc.ctex"]
+source_file="res://_/_ART/3D/Models/Katana/Katana_LP-correctif_DefaultMaterial_BaseColor.png"
+dest_files=["res://.godot/imported/Katana_LP-correctif_DefaultMaterial_BaseColor.png-a783717f9dc539d836078c65b7dd87ab.s3tc.ctex", "res://.godot/imported/Katana_LP-correctif_DefaultMaterial_BaseColor.png-a783717f9dc539d836078c65b7dd87ab.etc2.ctex"]
 
 [params]
 
