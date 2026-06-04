@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://njx823gyk04n" path="res://addons/godot-xr-tools/hands/scenes/highpoly/left_hand.tscn" id="2_688sg"]
 [ext_resource type="PackedScene" uid="uid://b4ysuy43poobf" path="res://addons/godot-xr-tools/functions/function_pickup.tscn" id="3_uyv2n"]
 [ext_resource type="PackedScene" uid="uid://raeeicvvindd" path="res://addons/godot-xr-tools/hands/scenes/highpoly/right_hand.tscn" id="4_810nd"]
-[ext_resource type="PackedScene" uid="uid://deu78wq8wtdpd" path="res://_/projet/DEV/Gaetan/Scenes/Graffic_environment_room_A.tscn" id="5_wq30q"]
+[ext_resource type="PackedScene" uid="uid://deu78wq8wtdpd" path="res://_/projet/dev/Gaetan/Scenes/Graffic_environment_room_A.tscn" id="5_wq30q"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_eys7y"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)

@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://b8k0n7i8wwixf"]
 
-[ext_resource type="Script" uid="uid://b2r4u17q7k0oh" path="res://_/projet/DEV/Richard/Scripts/KatanaRaycastToPoint.gd" id="1_3m8lq"]
+[ext_resource type="Script" uid="uid://b2r4u17q7k0oh" path="res://_/projet/dev/Richard/Scripts/KatanaRaycastToPoint.gd" id="1_3m8lq"]
 [ext_resource type="ArrayMesh" path="res://_/projet/Richard/Assets/Katana.obj" id="1_mo78c"]
-[ext_resource type="Texture2D" uid="uid://clyxu0qw5fjtn" path="res://_/projet/DEV/Richard/Assets/katanaTex.png" id="2_3m8lq"]
+[ext_resource type="Texture2D" uid="uid://clyxu0qw5fjtn" path="res://_/projet/dev/Richard/Assets/katanaTex.png" id="2_3m8lq"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ktqcq"]
 

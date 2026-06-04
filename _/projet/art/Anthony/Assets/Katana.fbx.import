@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://beb6l2dktqmxq"
-path="res://.godot/imported/Katana.fbx-4453eda53d0147ac386f43ef9b98c653.scn"
+path="res://.godot/imported/Katana.fbx-7752cb125802510e52a35d8062b2f8a4.scn"
 
 [deps]
 
-source_file="res://_/projet/art/Anthony/Demo_Katana/Katana.fbx"
-dest_files=["res://.godot/imported/Katana.fbx-4453eda53d0147ac386f43ef9b98c653.scn"]
+source_file="res://_/projet/art/Anthony/Assets/Katana.fbx"
+dest_files=["res://.godot/imported/Katana.fbx-7752cb125802510e52a35d8062b2f8a4.scn"]
 
 [params]
 

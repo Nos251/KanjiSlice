@@ -3,8 +3,8 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://clyxu0qw5fjtn"
-path.s3tc="res://.godot/imported/katanaTex.png-f5c75fbe31ebaaee543ddc4d39378def.s3tc.ctex"
-path.etc2="res://.godot/imported/katanaTex.png-f5c75fbe31ebaaee543ddc4d39378def.etc2.ctex"
+path.s3tc="res://.godot/imported/katanaTex.png-1b5f9c6defde8ef7f39a6322a86f8f42.s3tc.ctex"
+path.etc2="res://.godot/imported/katanaTex.png-1b5f9c6defde8ef7f39a6322a86f8f42.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://_/projet/DEV/Richard/Assets/katanaTex.png"
-dest_files=["res://.godot/imported/katanaTex.png-f5c75fbe31ebaaee543ddc4d39378def.s3tc.ctex", "res://.godot/imported/katanaTex.png-f5c75fbe31ebaaee543ddc4d39378def.etc2.ctex"]
+source_file="res://_/projet/dev/Richard/Assets/katanaTex.png"
+dest_files=["res://.godot/imported/katanaTex.png-1b5f9c6defde8ef7f39a6322a86f8f42.s3tc.ctex", "res://.godot/imported/katanaTex.png-1b5f9c6defde8ef7f39a6322a86f8f42.etc2.ctex"]
 
 [params]
 
