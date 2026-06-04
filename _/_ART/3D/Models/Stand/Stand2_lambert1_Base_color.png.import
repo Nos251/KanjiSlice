@@ -2,20 +2,24 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5oc2qjc0irv7"
-path="res://.godot/imported/katana2.png-cc3d3783c99f3a6e372ccf160573b27e.ctex"
+uid="uid://dgirkvyhn4r5p"
+path.s3tc="res://.godot/imported/Stand2_lambert1_Base_color.png-0cf0ca2b780179e4942be73feef8de78.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "eb6fb9fb6998daeed0ac6a749aad2507"
 }
 
 [deps]
 
-source_file="res://_/_ART/2D/Sprites/katana2.png"
-dest_files=["res://.godot/imported/katana2.png-cc3d3783c99f3a6e372ccf160573b27e.ctex"]
+source_file="res://Stand/Stand2_lambert1_Base_color.png"
+dest_files=["res://.godot/imported/Stand2_lambert1_Base_color.png-0cf0ca2b780179e4942be73feef8de78.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -23,7 +27,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=false
+mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -37,4 +41,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0
