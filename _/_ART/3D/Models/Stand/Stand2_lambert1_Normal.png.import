@@ -3,9 +3,10 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://igm0od4ua6fe"
-path.s3tc="res://.godot/imported/Stand2_lambert1_Normal.png-a0fbd13fa7071b6ce871177a34d6c5d5.s3tc.ctex"
+path.s3tc="res://.godot/imported/Stand2_lambert1_Normal.png-08026560892d27728fd79ade651d8b11.s3tc.ctex"
+path.etc2="res://.godot/imported/Stand2_lambert1_Normal.png-08026560892d27728fd79ade651d8b11.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -14,8 +15,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Stand/Stand2_lambert1_Normal.png"
-dest_files=["res://.godot/imported/Stand2_lambert1_Normal.png-a0fbd13fa7071b6ce871177a34d6c5d5.s3tc.ctex"]
+source_file="res://_/_ART/3D/Models/Stand/Stand2_lambert1_Normal.png"
+dest_files=["res://.godot/imported/Stand2_lambert1_Normal.png-08026560892d27728fd79ade651d8b11.s3tc.ctex", "res://.godot/imported/Stand2_lambert1_Normal.png-08026560892d27728fd79ade651d8b11.etc2.ctex"]
 
 [params]
 
