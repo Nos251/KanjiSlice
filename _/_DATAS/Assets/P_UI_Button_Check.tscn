@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://488jeflofilv"]
+
+[ext_resource type="Texture2D" uid="uid://bmla8cxdkffue" path="res://_/_ART/UI/Icons/ICN_Check.png" id="2_kwbqe"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_euikx"]
+bg_color = Color(0.69411767, 0, 0, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="P_UI_Button_Check" type="Control" unique_id=40664046]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Button2" type="Button" parent="." unique_id=1117537676]
+custom_minimum_size = Vector2(600, 300)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_euikx")
+icon = ExtResource("2_kwbqe")
+icon_alignment = 1

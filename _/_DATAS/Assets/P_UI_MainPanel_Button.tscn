@@ -18,4 +18,3 @@ corner_radius_bottom_left = 5
 theme_override_fonts/font = ExtResource("1_ne1ie")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_08fs0")
-text = "PLAY"

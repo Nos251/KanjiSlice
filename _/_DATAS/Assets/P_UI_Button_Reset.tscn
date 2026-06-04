@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://f5g2ck4r8ea2"]
+
+[ext_resource type="Texture2D" uid="uid://wuxryflu46v6" path="res://_/_ART/UI/Icons/ICN_Reset.png" id="2_0jsax"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lhs84"]
+bg_color = Color(0.69411767, 0, 0, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="P_UI_Button_Reset" type="Control" unique_id=1169833127]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="." unique_id=2034574014]
+custom_minimum_size = Vector2(600, 300)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_lhs84")
+icon = ExtResource("2_0jsax")
+icon_alignment = 1
