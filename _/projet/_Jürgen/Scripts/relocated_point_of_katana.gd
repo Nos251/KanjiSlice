@@ -24,7 +24,7 @@ var origin_pixel_black : int
 @export var katana_percentage_y : float
 # Called when the node enters the scene tree for the first time.
 
-func import_point_of_katana(katana : Vector3):
+func set_point_of_katana(katana : Vector3):
 	point_of_katana = katana
 func _ready() -> void:
 	
