@@ -1,7 +1,0 @@
-[gd_scene format=3 uid="uid://bvfu11vtfcyga"]
-
-[ext_resource type="PackedScene" uid="uid://drc85at4jl6ii" path="res://_/_ART/3D/Models/3D_Lantern.glb" id="1_umakp"]
-
-[node name="Node3D" type="Node3D" unique_id=1638593671]
-
-[node name="3D_Lantern" parent="." unique_id=1090012103 instance=ExtResource("1_umakp")]
