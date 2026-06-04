@@ -2,49 +2,46 @@
 
 [ext_resource type="PackedScene" uid="uid://knk7ldjyionw" path="res://_/projet/Richard/Scenes/Prefab/p_katana.tscn" id="1_3vitg"]
 [ext_resource type="Script" uid="uid://bvnwbj485wjwo" path="res://_/projet/Richard/Scripts/drawing_script.gd" id="2_80fep"]
+[ext_resource type="Texture2D" uid="uid://cvax5ydcao40e" path="res://_/projet/_Jürgen/Assets/Kanji/Facile/Fire.svg" id="4_80fep"]
 [ext_resource type="PackedScene" uid="uid://btbbr057a83en" path="res://_/projet/_Jürgen/Scenes/position_du_sabre.tscn" id="5_1he0v"]
 [ext_resource type="Script" uid="uid://cp2mcj4870i2a" path="res://_/projet/_Jürgen/Scripts/relocated_point_of_katana.gd" id="6_reeod"]
 
-[sub_resource type="Animation" id="Animation_ckaau"]
+[sub_resource type="Animation" id="Animation_3vitg"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Anchor:position")
+tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(0, 0, 0)]
+"values": [Vector3(-0.04350251, 0.62977195, 0.5956744)]
 }
 
 [sub_resource type="Animation" id="Animation_80fep"]
-resource_name = "idle"
-
-[sub_resource type="Animation" id="Animation_30psc"]
-resource_name = "up down"
-length = 3.0666666
+resource_name = "new_animation"
+length = 1.3333334
 loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Anchor:position")
+tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.54, 3.0666666),
+"times": PackedFloat32Array(0, 1.05, 2.14),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0, 1.6510068, 0), Vector3(0, 1.1538285, 0)]
+"values": [Vector3(-0.04350251, 0.62977195, 0.5956744), Vector3(-0.04350251, 0.14590079, 0.5956744), Vector3(-0.04350251, 0.14590079, 0.5956744)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_apnx7"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1he0v"]
 _data = {
-&"RESET": SubResource("Animation_ckaau"),
-&"idle": SubResource("Animation_80fep"),
-&"up down": SubResource("Animation_30psc")
+&"RESET": SubResource("Animation_3vitg"),
+&"new_animation": SubResource("Animation_80fep")
 }
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_3vitg"]
@@ -63,7 +60,11 @@ albedo_texture = SubResource("ViewportTexture_3vitg")
 [node name="KatanaPaint" type="Node3D" unique_id=1609574989]
 
 [node name="Katana" parent="." unique_id=1823821026 instance=ExtResource("1_3vitg")]
-transform = Transform3D(-0.99735945, -0.07261058, 0.0013600145, 0.07000672, -0.96623796, -0.24795884, 0.019318525, -0.24720885, 0.9687696, 0.0003719628, 0.34334594, 0.07863024)
+transform = Transform3D(-0.99735945, -0.07261058, 0.0013600151, 0.00071161985, -0.028497353, -0.99959373, 0.07261983, -0.99695337, 0.02847369, -0.04350251, 0.62977195, 0.5956744)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Katana" unique_id=723745229]
+libraries/ = SubResource("AnimationLibrary_1he0v")
+autoplay = &"new_animation"
 
 [node name="DrawingBoard" type="Node3D" parent="." unique_id=1137499325 node_paths=PackedStringArray("painting_board")]
 script = ExtResource("2_80fep")
@@ -73,19 +74,15 @@ is_drawing = true
 [node name="Anchor" type="Node3D" parent="DrawingBoard" unique_id=88601096]
 transform = Transform3D(-0.9925221, 0, 0.12206475, 0, 1, 0, -0.12206475, 0, -0.9925221, 0, 0, 0)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="DrawingBoard" unique_id=1701183071]
-libraries/ = SubResource("AnimationLibrary_apnx7")
-autoplay = &"idle"
-
-[node name="Camera3D" type="Camera3D" parent="." unique_id=593476175]
-transform = Transform3D(-0.99651754, 0.07851671, -0.028073292, 0.05817299, 0.8958382, 0.44055638, 0.059740163, 0.43738905, -0.8972859, -0.13153934, 1.1465588, -1.1656736)
-
 [node name="DirectionalLight3D" type="SpotLight3D" parent="." unique_id=1176857340]
 transform = Transform3D(-0.98536646, -0.063394904, 0.15822142, 0, 0.9282614, 0.3719284, -0.17044921, 0.36648577, -0.9146777, 0, 1.4091115, -2.3790429)
 
 [node name="Scripts" type="Node3D" parent="." unique_id=380061227]
 
 [node name="PositionDuSabre" parent="Scripts" unique_id=704180931 instance=ExtResource("5_1he0v")]
+
+[node name="Sprite2D" parent="Scripts/PositionDuSabre/SubViewport" parent_id_path=PackedInt32Array(704180931, 240347611) index="0" unique_id=1459200077]
+texture = ExtResource("4_80fep")
 
 [node name="PixelCounter" parent="Scripts/PositionDuSabre/Script" parent_id_path=PackedInt32Array(704180931, 835427384) index="0" unique_id=1151370069]
 liste_kanji = Array[Texture2D]([])
@@ -94,10 +91,10 @@ liste_kanji = Array[Texture2D]([])
 visible = false
 
 [node name="Camera3D" parent="Scripts/PositionDuSabre/Node3D/Pivot" parent_id_path=PackedInt32Array(704180931, 1693644126) index="0" unique_id=1686985493]
-transform = Transform3D(0.21321358, -0.36004016, 0.90824616, 1.278655e-08, 0.92962223, 0.36851394, -0.9770056, -0.078572154, 0.1982081, 1.5138385, 0.6493776, 0.37451643)
+transform = Transform3D(0.78706586, -0.22732481, 0.57345515, 2.0065809e-08, 0.92962223, 0.3685139, -0.61686903, -0.2900447, 0.7316739, 0.17237878, 0.6493776, 0.7812143)
 
 [node name="Quad" parent="Scripts/PositionDuSabre" index="6" unique_id=458882736]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+transform = Transform3D(0.5, 0, 0, 0, 0.10797011, -0.4882033, 0, 0.4882033, 0.10797011, 0, 0.32009035, 0)
 
 [node name="Kanji_Support" parent="Scripts/PositionDuSabre/Quad" index="0" unique_id=1440527393]
 surface_material_override/0 = SubResource("StandardMaterial3D_80fep")

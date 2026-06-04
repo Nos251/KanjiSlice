@@ -82,7 +82,7 @@ func _process(delta: float) -> void:
 		katana_percentage_y = 0.0
 
 	# 3. On range ça dans ton Vector3 pour l'inspecteur ou l'affichage
-	var local_percentage : Vector3 = Vector3(katana_percentage_x,0.0, katana_percentage_y,)
+	var local_percentage : Vector3 = Vector3(katana_percentage_x,0.0, katana_percentage_y)
 	print("katana : ", local_position_of_katana_unity.x, ". local : ", local_width_height.x)
 	print("Position Katana en % : ", local_percentage)
 	local_percentage_emit.emit(local_percentage) 
