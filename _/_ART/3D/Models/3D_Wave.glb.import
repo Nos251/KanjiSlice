@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://drc85at4jl6ii"
-path="res://.godot/imported/3D_Lantern.glb-e4be3558e6c68290141aa4b9ccebd4c6.scn"
+uid="uid://b425ikaykfouq"
+path="res://.godot/imported/3D_Wave.glb-cf0d39c282b89b255d296af2db0bb46a.scn"
 
 [deps]
 
-source_file="res://_/_ART/3D/Models/3D_Lantern.glb"
-dest_files=["res://.godot/imported/3D_Lantern.glb-e4be3558e6c68290141aa4b9ccebd4c6.scn"]
+source_file="res://_/_ART/3D/Models/3D_Wave.glb"
+dest_files=["res://.godot/imported/3D_Wave.glb-cf0d39c282b89b255d296af2db0bb46a.scn"]
 
 [params]
 
@@ -39,15 +39,10 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "materials": {
-"T_Lantern": {
+"Material": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://_/_ART/3D/Materials/M_Lantern.tres",
-"use_external/path": "uid://creeqphp7x5vg"
-},
-"T_Lantern_M": {
-"use_external/enabled": true,
-"use_external/fallback_path": "res://_/_ART/3D/Materials/M_LanternMetal.tres",
-"use_external/path": "uid://baor2wlmq7fe2"
+"use_external/fallback_path": "res://_/_ART/3D/Models/Material.tres",
+"use_external/path": "uid://cqkrld1rgiqya"
 }
 }
 }

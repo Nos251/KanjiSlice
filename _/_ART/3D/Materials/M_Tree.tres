@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dpupfxvt1pi47"]
+
+[ext_resource type="Texture2D" uid="uid://cd2iduvuji0hj" path="res://_/_ART/3D/Textures/T_Sakura.png" id="1_sqxxo"]
+
+[resource]
+resource_name = "Material"
+cull_mode = 2
+albedo_texture = ExtResource("1_sqxxo")
+roughness = 0.5

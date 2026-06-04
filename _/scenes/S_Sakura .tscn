@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bmxm67hodkcaw"]
+
+[ext_resource type="PackedScene" uid="uid://cudemunrrg13p" path="res://_/_ART/3D/Models/3D_Sakura.glb" id="1_yl453"]
+
+[node name="Node3D" type="Node3D" unique_id=1394091301]
+
+[node name="3D_Sakura" parent="." unique_id=1592604449 instance=ExtResource("1_yl453")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0702858, 0, 0.23882318)

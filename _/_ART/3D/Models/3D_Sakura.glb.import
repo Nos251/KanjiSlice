@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://drc85at4jl6ii"
-path="res://.godot/imported/3D_Lantern.glb-e4be3558e6c68290141aa4b9ccebd4c6.scn"
+uid="uid://cudemunrrg13p"
+path="res://.godot/imported/3D_Sakura.glb-448a8916b254b05ed9e8c885ade8f1be.scn"
 
 [deps]
 
-source_file="res://_/_ART/3D/Models/3D_Lantern.glb"
-dest_files=["res://.godot/imported/3D_Lantern.glb-e4be3558e6c68290141aa4b9ccebd4c6.scn"]
+source_file="res://_/_ART/3D/Models/3D_Sakura.glb"
+dest_files=["res://.godot/imported/3D_Sakura.glb-448a8916b254b05ed9e8c885ade8f1be.scn"]
 
 [params]
 
@@ -39,15 +39,15 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "materials": {
-"T_Lantern": {
+"Material": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://_/_ART/3D/Materials/M_Lantern.tres",
-"use_external/path": "uid://creeqphp7x5vg"
+"use_external/fallback_path": "res://_/_ART/3D/Materials/M_Tree.tres",
+"use_external/path": "uid://dpupfxvt1pi47"
 },
-"T_Lantern_M": {
+"main color flower": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://_/_ART/3D/Materials/M_LanternMetal.tres",
-"use_external/path": "uid://baor2wlmq7fe2"
+"use_external/fallback_path": "res://_/_ART/3D/Materials/M_Flower.tres",
+"use_external/path": "uid://b22upml7y6kwt"
 }
 }
 }
