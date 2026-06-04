@@ -65,6 +65,9 @@ albedo_texture = SubResource("ViewportTexture_eqtvh")
 
 [sub_resource type="QuadMesh" id="QuadMesh_wyo0h"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_ak6ka"]
+size = Vector3(1, 0.058532715, 1)
+
 [node name="PositionDuSabre" type="Node3D" unique_id=704180931]
 
 [node name="SubViewport" type="SubViewport" parent="." unique_id=240347611]
@@ -134,6 +137,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0.5)
 
 [node name="up_right" type="Node3D" parent="Quad" unique_id=1145692029]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, -0.5)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Quad" unique_id=782924640]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Quad/StaticBody3D" unique_id=183643614]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.025787473, -1.1920929e-07)
+shape = SubResource("BoxShape3D_ak6ka")
 
 [node name="Percentage_Texture_Collision" type="Node" parent="." unique_id=2101423386]
 script = ExtResource("8_5r4q8")

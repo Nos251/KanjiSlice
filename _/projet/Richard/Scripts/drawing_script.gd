@@ -1,4 +1,4 @@
-class_name Drawing_script
+class_name DrawingScript
 extends Node3D
 
 @export var brush_color:Color
@@ -15,11 +15,14 @@ extends Node3D
 var img_builder : Image
 var tex : ImageTexture
 
+
+func set_is_drawing(is_touching : bool):
+	is_drawing = is_touching
 func _ready() -> void:
 	img_builder = Image.create(width, heigth, false, Image.FORMAT_RGBA8)
-	img_builder.fill(Color.WHITE)
+	img_builder.fill(Color.GREEN)
 	tex = ImageTexture.create_from_image(img_builder)
-	var material : StandardMaterial3D = painting_board.get_active_material(0)
+	var material : StandardMaterial3D = painting_board.get_surface_override_material(0)
 	material.albedo_texture = tex
 	
 const brush: Array[Vector2i] = [
@@ -39,6 +42,7 @@ var clear : bool
 func set_cursor_position(percentage01_in_vector2 : Vector3 ):
 	pixel_position = Vector2i(percentage01_in_vector2.x*width,percentage01_in_vector2.y*heigth)
 	recieved_position_in_percent = percentage01_in_vector2
+
 #func button_press_to_draw_and_clear(name : String) -> void:
 	#if name == "trigger":
 		#draw = true
