@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bde8x7ivbo4uc"
-path="res://.godot/imported/Temple.svg-a373e5c5b18bc92de787b2e9ffd49dc0.ctex"
+uid="uid://c5nsnmbbci604"
+path="res://.godot/imported/Talent.svg-482d5d81b172c0d10ceb0a549e375d15.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_/projet/_Jürgen/Assets/Kanji/Moyen/Temple.svg"
-dest_files=["res://.godot/imported/Temple.svg-a373e5c5b18bc92de787b2e9ffd49dc0.ctex"]
+source_file="res://_/projet/_Jurgen/Assets/Kanji/Facile/Talent.svg"
+dest_files=["res://.godot/imported/Talent.svg-482d5d81b172c0d10ceb0a549e375d15.ctex"]
 
 [params]
 

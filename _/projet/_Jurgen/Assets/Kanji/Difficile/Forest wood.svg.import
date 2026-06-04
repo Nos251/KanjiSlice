@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d38y0gwmu4dq1"
-path="res://.godot/imported/Many.svg-c2050647b8cc47045553dd66df691e78.ctex"
+uid="uid://ocaee30lpsc7"
+path="res://.godot/imported/Forest wood.svg-743c467ecb1f73d5507c54af5eff7bcc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_/projet/_Jürgen/Assets/Kanji/Moyen/Many.svg"
-dest_files=["res://.godot/imported/Many.svg-c2050647b8cc47045553dd66df691e78.ctex"]
+source_file="res://_/projet/_Jurgen/Assets/Kanji/Difficile/Forest wood.svg"
+dest_files=["res://.godot/imported/Forest wood.svg-743c467ecb1f73d5507c54af5eff7bcc.ctex"]
 
 [params]
 

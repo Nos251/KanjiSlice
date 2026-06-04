@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8wk6j44fghpy"
-path="res://.godot/imported/Period.svg-c2e76465880dad0611a852fdfcc63623.ctex"
+uid="uid://c1raydnxk383"
+path="res://.godot/imported/Summer.svg-b50be3461b72d3f28b21323fa4fac5fb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_/projet/_Jürgen/Assets/Kanji/Facile/Period.svg"
-dest_files=["res://.godot/imported/Period.svg-c2e76465880dad0611a852fdfcc63623.ctex"]
+source_file="res://_/projet/_Jurgen/Assets/Kanji/Difficile/Summer.svg"
+dest_files=["res://.godot/imported/Summer.svg-b50be3461b72d3f28b21323fa4fac5fb.ctex"]
 
 [params]
 

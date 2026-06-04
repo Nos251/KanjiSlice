@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://k14wuqyyopbf"
-path="res://.godot/imported/Flower.svg-313101000d49c69d2353dc5158a4ef3b.ctex"
+uid="uid://b8wk6j44fghpy"
+path="res://.godot/imported/Period.svg-b10ab54868f2780d4da82c91bcc57d39.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_/projet/_Jürgen/Assets/Kanji/Moyen/Flower.svg"
-dest_files=["res://.godot/imported/Flower.svg-313101000d49c69d2353dc5158a4ef3b.ctex"]
+source_file="res://_/projet/_Jurgen/Assets/Kanji/Facile/Period.svg"
+dest_files=["res://.godot/imported/Period.svg-b10ab54868f2780d4da82c91bcc57d39.ctex"]
 
 [params]
 

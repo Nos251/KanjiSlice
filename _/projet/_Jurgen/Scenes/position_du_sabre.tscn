@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://btbbr057a83en"]
 
-[ext_resource type="Script" uid="uid://cp2mcj4870i2a" path="res://_/projet/_Jürgen/Scripts/relocated_point_of_katana.gd" id="1_1epjq"]
-[ext_resource type="Texture2D" uid="uid://dbkk4wtodth2h" path="res://_/projet/_Jürgen/Assets/Kanji/Facile/Stand_Up.svg" id="1_eqtvh"]
-[ext_resource type="Texture2D" uid="uid://cvax5ydcao40e" path="res://_/projet/_Jürgen/Assets/Kanji/Facile/Fire.svg" id="3_ak6ka"]
-[ext_resource type="Script" uid="uid://6p73hmdhwtbv" path="res://_/projet/_Jürgen/Scripts/pixel_calcul.gd" id="3_eqtvh"]
-[ext_resource type="Texture2D" uid="uid://b8wk6j44fghpy" path="res://_/projet/_Jürgen/Assets/Kanji/Facile/Period.svg" id="4_ph73b"]
-[ext_resource type="Texture2D" uid="uid://dfuf8wkj3qtt7" path="res://_/projet/_Jürgen/Assets/Kanji/Facile/Six.svg" id="5_h5gec"]
-[ext_resource type="Texture2D" uid="uid://c5nsnmbbci604" path="res://_/projet/_Jürgen/Assets/Kanji/Facile/Talent.svg" id="7_jq8r1"]
-[ext_resource type="Script" uid="uid://ir1g0akkr1f8" path="res://_/projet/_Jürgen/Scenes/percentage_texture_collision.gd" id="8_5r4q8"]
+[ext_resource type="Script" uid="uid://cp2mcj4870i2a" path="res://_/projet/_Jurgen/Scripts/relocated_point_of_katana.gd" id="1_1epjq"]
+[ext_resource type="Texture2D" uid="uid://dbkk4wtodth2h" path="res://_/projet/_Jurgen/Assets/Kanji/Facile/Stand_Up.svg" id="1_eqtvh"]
+[ext_resource type="Texture2D" uid="uid://cvax5ydcao40e" path="res://_/projet/_Jurgen/Assets/Kanji/Facile/Fire.svg" id="3_ak6ka"]
+[ext_resource type="Script" uid="uid://6p73hmdhwtbv" path="res://_/projet/_Jurgen/Scripts/pixel_calcul.gd" id="3_eqtvh"]
+[ext_resource type="Texture2D" uid="uid://b8wk6j44fghpy" path="res://_/projet/_Jurgen/Assets/Kanji/Facile/Period.svg" id="4_ph73b"]
+[ext_resource type="Texture2D" uid="uid://dfuf8wkj3qtt7" path="res://_/projet/_Jurgen/Assets/Kanji/Facile/Six.svg" id="5_h5gec"]
+[ext_resource type="Texture2D" uid="uid://c5nsnmbbci604" path="res://_/projet/_Jurgen/Assets/Kanji/Facile/Talent.svg" id="7_jq8r1"]
+[ext_resource type="Script" uid="uid://ir1g0akkr1f8" path="res://_/projet/_Jurgen/Scenes/percentage_texture_collision.gd" id="8_5r4q8"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_eqtvh"]
 

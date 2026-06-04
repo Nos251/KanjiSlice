@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bp7sdi7i7gl8w"
-path="res://.godot/imported/Gold.svg-6b8b802ece2a8b64aa9f71d5eaa6bb40.ctex"
+uid="uid://bnd3tmyt7trq2"
+path="res://.godot/imported/Morning.svg-06e4187099b64a5ef7f442a4d5563dba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_/projet/_Jürgen/Assets/Kanji/Moyen/Gold.svg"
-dest_files=["res://.godot/imported/Gold.svg-6b8b802ece2a8b64aa9f71d5eaa6bb40.ctex"]
+source_file="res://_/projet/_Jurgen/Assets/Kanji/Difficile/Morning.svg"
+dest_files=["res://.godot/imported/Morning.svg-06e4187099b64a5ef7f442a4d5563dba.ctex"]
 
 [params]
 

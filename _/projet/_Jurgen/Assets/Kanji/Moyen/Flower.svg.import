@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfuf8wkj3qtt7"
-path="res://.godot/imported/Six.svg-f95650807f9d2ee7232ad96baaef9905.ctex"
+uid="uid://k14wuqyyopbf"
+path="res://.godot/imported/Flower.svg-f3ba9347d8cb3c74d47fb49bad509738.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_/projet/_Jürgen/Assets/Kanji/Facile/Six.svg"
-dest_files=["res://.godot/imported/Six.svg-f95650807f9d2ee7232ad96baaef9905.ctex"]
+source_file="res://_/projet/_Jurgen/Assets/Kanji/Moyen/Flower.svg"
+dest_files=["res://.godot/imported/Flower.svg-f3ba9347d8cb3c74d47fb49bad509738.ctex"]
 
 [params]
 
