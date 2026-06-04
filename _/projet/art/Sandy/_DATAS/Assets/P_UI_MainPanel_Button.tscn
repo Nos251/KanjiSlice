@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://c3dprie6kja07"]
+
+[ext_resource type="FontFile" uid="uid://02u0gcorq7bs" path="res://_/projet/art/Sandy/_ART/UI/Fonts/SAKURATA.ttf" id="1_ne1ie"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_08fs0"]
+bg_color = Color(0.69411767, 0, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="Panel" type="Button" unique_id=2000824040]
+theme_override_fonts/font = ExtResource("1_ne1ie")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_08fs0")
+text = "PLAY"

@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://b3pgxit4wv12g"]
+
+[ext_resource type="PackedScene" uid="uid://beb6l2dktqmxq" path="res://_/projet/art/Anthony/Demo_Katana/Katana.fbx" id="1_yjl4j"]
+
+[node name="DemoKatana" type="Node3D" unique_id=793408226]
+
+[node name="Katana" parent="." unique_id=506531280 instance=ExtResource("1_yjl4j")]

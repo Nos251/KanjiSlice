@@ -1,0 +1,145 @@
+[gd_scene format=3 uid="uid://b8k0n7i8wwixf"]
+
+[ext_resource type="Script" uid="uid://b2r4u17q7k0oh" path="res://_/projet/DEV/Richard/Scripts/KatanaRaycastToPoint.gd" id="1_3m8lq"]
+[ext_resource type="ArrayMesh" path="res://_/projet/Richard/Assets/Katana.obj" id="1_mo78c"]
+[ext_resource type="Texture2D" uid="uid://clyxu0qw5fjtn" path="res://_/projet/DEV/Richard/Assets/katanaTex.png" id="2_3m8lq"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ktqcq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5eyr7"]
+albedo_texture = ExtResource("2_3m8lq")
+
+[sub_resource type="SphereMesh" id="SphereMesh_3m8lq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ktqcq"]
+shading_mode = 0
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5eyr7"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_fx2ku"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y8biq"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0.40784314)
+
+[sub_resource type="Animation" id="Animation_ckaau"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Anchor:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_30psc"]
+resource_name = "up down"
+length = 3.0666666
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Anchor:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.54, 3.0666666),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 1.6510068, 0), Vector3(0, 1.1538285, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_apnx7"]
+_data = {
+&"RESET": SubResource("Animation_ckaau"),
+&"up down": SubResource("Animation_30psc")
+}
+
+[node name="KatanaPaint" type="Node3D" unique_id=1609574989]
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1881865162]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.51192784, 0)
+visible = false
+mesh = SubResource("BoxMesh_ktqcq")
+
+[node name="Katana" type="Node3D" parent="." unique_id=1135263213 node_paths=PackedStringArray("raycast_line", "debug_point")]
+script = ExtResource("1_3m8lq")
+raycast_line = [NodePath("RayCast3D6"), NodePath("RayCast3D5"), NodePath("RayCast3D4"), NodePath("RayCast3D3"), NodePath("RayCast3D2"), NodePath("RayCast3D")]
+debug_point = NodePath("MeshInstance3D2")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Katana" unique_id=1032948131]
+transform = Transform3D(0.14, 0, 0, 0, 0.14, 0, 0, 0, 0.14, 0, -0.1281094, -0.119844705)
+mesh = ExtResource("1_mo78c")
+surface_material_override/0 = SubResource("StandardMaterial3D_5eyr7")
+
+[node name="RayCast3D" type="RayCast3D" parent="Katana" unique_id=1871800223]
+transform = Transform3D(1, 0, 0, 0, 0.9997422, 0.022705529, 0, -0.022705529, 0.9997422, 0, 0.23319897, 0.030818716)
+target_position = Vector3(0, 0.2, 0)
+debug_shape_custom_color = Color(1, 0, 0, 1)
+debug_shape_thickness = 1
+
+[node name="RayCast3D2" type="RayCast3D" parent="Katana" unique_id=1949211062]
+transform = Transform3D(1, 0, 0, 0, 0.9966876, 0.081325024, 0, -0.081325024, 0.9966876, 0, 0.432584, 0.02450575)
+target_position = Vector3(0, 0.2, 0)
+debug_shape_custom_color = Color(1, 0, 0, 1)
+debug_shape_thickness = 1
+
+[node name="RayCast3D3" type="RayCast3D" parent="Katana" unique_id=742209066]
+transform = Transform3D(1, 0, 0, 0, 0.98837316, 0.1520476, 0, -0.1520476, 0.98837316, 0, 0.63091683, 0.009249378)
+target_position = Vector3(0, 0.2, 0)
+debug_shape_custom_color = Color(1, 0, 0, 1)
+debug_shape_thickness = 1
+
+[node name="RayCast3D4" type="RayCast3D" parent="Katana" unique_id=1447967510]
+transform = Transform3D(1, 0, 0, 0, 0.9783783, 0.206823, 0, -0.206823, 0.9783783, 0, 0.8291736, -0.02224268)
+target_position = Vector3(0, 0.18, 0)
+debug_shape_custom_color = Color(1, 0, 0, 1)
+debug_shape_thickness = 1
+
+[node name="RayCast3D5" type="RayCast3D" parent="Katana" unique_id=2132601602]
+transform = Transform3D(1, 0, 0, 0, 0.84834397, 0.5294455, 0, -0.5294455, 0.84834397, 0, 1.0045271, -0.058744833)
+target_position = Vector3(0, 0.035, 0)
+debug_shape_custom_color = Color(1, 0, 0, 1)
+debug_shape_thickness = 1
+
+[node name="RayCast3D6" type="RayCast3D" parent="Katana" unique_id=1367016382]
+transform = Transform3D(1, 0, 0, 0, 0.5035186, 0.8639844, 0, -0.8639844, 0.5035186, 0, 1.0360216, -0.07764153)
+target_position = Vector3(0, 0.035, 0)
+debug_shape_custom_color = Color(1, 0, 0, 1)
+debug_shape_thickness = 1
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Katana" unique_id=1562805814]
+transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 0, 0.47704583, 0.13343929)
+mesh = SubResource("SphereMesh_3m8lq")
+surface_material_override/0 = SubResource("StandardMaterial3D_ktqcq")
+
+[node name="Node3D2" type="Node3D" parent="." unique_id=1137499325]
+
+[node name="Anchor" type="Node3D" parent="Node3D2" unique_id=88601096]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Node3D2/Anchor" unique_id=1397914552]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D2/Anchor/StaticBody3D" unique_id=539114051]
+shape = SubResource("BoxShape3D_5eyr7")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D2/Anchor/StaticBody3D" unique_id=1441852178]
+mesh = SubResource("BoxMesh_fx2ku")
+surface_material_override/0 = SubResource("StandardMaterial3D_y8biq")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Node3D2" unique_id=1701183071]
+libraries/ = SubResource("AnimationLibrary_apnx7")
+autoplay = &"up down"
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=593476175]
+transform = Transform3D(0.5095091, 0, -0.8604653, 0, 1, 0, 0.8604653, 0, 0.5095091, -1.0587949, 0.6565106, 0.76087564)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2117628934]
+transform = Transform3D(1, 0, 0, 0, 0.9282614, 0.3719284, 0, -0.3719284, 0.9282614, 0, 1.4091115, 0.9931598)
+
+[connection signal="katana_is_touching" from="Katana" to="Katana/MeshInstance3D2" method="set_visible"]

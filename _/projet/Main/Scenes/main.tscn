@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://7ultpwsnkh6r"]
+
+[ext_resource type="Script" uid="uid://8a8axr78lxwl" path="res://_/projet/MAIN/Scripts/xr_initialise.gd" id="1_ka54u"]
+[ext_resource type="PackedScene" uid="uid://njx823gyk04n" path="res://addons/godot-xr-tools/hands/scenes/highpoly/left_hand.tscn" id="2_n746g"]
+[ext_resource type="PackedScene" uid="uid://raeeicvvindd" path="res://addons/godot-xr-tools/hands/scenes/highpoly/right_hand.tscn" id="3_qyt7o"]
+[ext_resource type="PackedScene" uid="uid://caaku0741v11d" path="res://_/projet/DEV/Gaetan/Scenes/Graffic_environment_room_B.tscn" id="4_8ooqu"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_b1dta"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_cmwcy"]
+sky_material = SubResource("ProceduralSkyMaterial_b1dta")
+
+[sub_resource type="Environment" id="Environment_nm8mh"]
+background_mode = 2
+sky = SubResource("Sky_cmwcy")
+tonemap_mode = 2
+
+[node name="Main" type="Node3D" unique_id=405447512]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1631905932]
+environment = SubResource("Environment_nm8mh")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=965675363]
+transform = Transform3D(-0.43301266, 0.2165063, 0.87500006, 0.75, 0.625, 0.21650635, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="XROrigin3D" type="XROrigin3D" parent="." unique_id=993759417]
+script = ExtResource("1_ka54u")
+
+[node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D" unique_id=164218080]
+
+[node name="XRController3DLeft" type="XRController3D" parent="XROrigin3D" unique_id=1472896718]
+tracker = &"left_hand"
+
+[node name="LeftHand" parent="XROrigin3D/XRController3DLeft" unique_id=1400785915 instance=ExtResource("2_n746g")]
+
+[node name="XRController3DRight" type="XRController3D" parent="XROrigin3D" unique_id=100598903]
+tracker = &"right_hand"
+
+[node name="RightHand" parent="XROrigin3D/XRController3DRight" unique_id=101932555 instance=ExtResource("3_qyt7o")]
+
+[node name="Graffic_environment_room_A" parent="." unique_id=1014261016 instance=ExtResource("4_8ooqu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0, 0)
