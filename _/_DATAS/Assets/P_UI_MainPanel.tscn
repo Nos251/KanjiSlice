@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://2kq7qngm75mi"]
 
-[ext_resource type="FontFile" uid="uid://02u0gcorq7bs" path="res://_/_ART/UI/Fonts/SAKURATA.ttf" id="1_fg4vr"]
+[ext_resource type="FontFile" uid="uid://d4d3wjwpsdy0t" path="res://_/_ART/UI/Fonts/JapanBento-DemoVersion-Regular.otf" id="1_fg4vr"]
 [ext_resource type="Texture2D" uid="uid://cemfjdjdsd4y8" path="res://_/_ART/2D/Sprites/katana.png" id="2_pma6d"]
 [ext_resource type="Texture2D" uid="uid://c5oc2qjc0irv7" path="res://_/_ART/2D/Sprites/katana2.png" id="3_kotl4"]
 [ext_resource type="PackedScene" uid="uid://c3dprie6kja07" path="res://_/_DATAS/Assets/P_UI_MainPanel_Button.tscn" id="4_idujo"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4wrup"]
 font = ExtResource("1_fg4vr")
-font_size = 70
+font_size = 121
 font_color = Color(0.69245994, 1.92523e-06, 2.8878452e-07, 1)
 outline_size = 20
 
@@ -104,8 +104,12 @@ theme_override_constants/margin_bottom = 0
 [node name="Panel" parent="Panel/MarginContainer/VBoxContainer/Control/HBoxContainer/Panel/HBoxContainer/MarginContainer" unique_id=2000824040 instance=ExtResource("4_idujo")]
 custom_minimum_size = Vector2(300, 150)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("1_fg4vr")
+theme_override_font_sizes/font_size = 80
 
 [node name="Panel2" parent="Panel/MarginContainer/VBoxContainer/Control/HBoxContainer/Panel/HBoxContainer" unique_id=1241381564 instance=ExtResource("4_idujo")]
 custom_minimum_size = Vector2(300, 150)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("1_fg4vr")
+theme_override_font_sizes/font_size = 70
 text = "QUIT"
