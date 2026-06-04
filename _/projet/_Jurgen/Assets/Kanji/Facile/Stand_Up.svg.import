@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1raydnxk383"
-path="res://.godot/imported/Summer.svg-17d7462447b89a8c5e3ca465c4abf7ff.ctex"
+uid="uid://dbkk4wtodth2h"
+path="res://.godot/imported/Stand_Up.svg-f2e14370dceb197074b03e49dd67ea66.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_/projet/_Jürgen/Assets/Kanji/Difficile/Summer.svg"
-dest_files=["res://.godot/imported/Summer.svg-17d7462447b89a8c5e3ca465c4abf7ff.ctex"]
+source_file="res://_/projet/_Jurgen/Assets/Kanji/Facile/Stand_Up.svg"
+dest_files=["res://.godot/imported/Stand_Up.svg-f2e14370dceb197074b03e49dd67ea66.ctex"]
 
 [params]
 

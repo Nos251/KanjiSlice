@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvax5ydcao40e"
-path="res://.godot/imported/Fire.svg-7316079a121b3deb3243456a7f9ab3bb.ctex"
+uid="uid://bde8x7ivbo4uc"
+path="res://.godot/imported/Temple.svg-a7043d4aa9931a4f470a8c4ada80b2d0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_/projet/_Jürgen/Assets/Kanji/Facile/Fire.svg"
-dest_files=["res://.godot/imported/Fire.svg-7316079a121b3deb3243456a7f9ab3bb.ctex"]
+source_file="res://_/projet/_Jurgen/Assets/Kanji/Moyen/Temple.svg"
+dest_files=["res://.godot/imported/Temple.svg-a7043d4aa9931a4f470a8c4ada80b2d0.ctex"]
 
 [params]
 
