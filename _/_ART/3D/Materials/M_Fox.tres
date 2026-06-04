@@ -1,9 +1,6 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://blemxf7nilkcw"]
 
-[ext_resource type="Texture2D" uid="uid://dmil2hyuw7wdf" path="res://_/_ART/3D/Models/3D_FOX_cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTExL3Jhd3BpeGVsb2ZmaWNlMTFfYV9iZWF1dGlmdWxfcmVjeWNsZWRfcGFwZXJfdGV4dHVyZV9pbl9uZXV0cmFsX180NzU3MWVkMS00NGVhLTQ1MGMtOTM2Yy0xNzg4NzkyODI1M2VfMS5qcGc.jpg" id="1_ovack"]
-
 [resource]
 resource_name = "Material"
 cull_mode = 2
-albedo_texture = ExtResource("1_ovack")
 roughness = 0.5

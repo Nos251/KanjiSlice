@@ -2,21 +2,21 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbr3ocgj7rynl"
-path.s3tc="res://.godot/imported/3D_Wave_360_F_667195231_RieyYLOQIwZrgNf4vI7J5vcojlQCFDJV.jpg-4b68b049f59b653e12b525e7382d830b.s3tc.ctex"
-path.etc2="res://.godot/imported/3D_Wave_360_F_667195231_RieyYLOQIwZrgNf4vI7J5vcojlQCFDJV.jpg-4b68b049f59b653e12b525e7382d830b.etc2.ctex"
+uid="uid://dkpfa2ttsb7sk"
+path.s3tc="res://.godot/imported/MSH_Support_T_Support_Wood.jpg-04f83d5a3dfde46f6d4ac1075286b27a.s3tc.ctex"
+path.etc2="res://.godot/imported/MSH_Support_T_Support_Wood.jpg-04f83d5a3dfde46f6d4ac1075286b27a.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "acb235e234d3305f96d095d8f5c314a8"
+"md5": "b6f1e31e67d63f5dfb1c8f0c030fe1f7"
 }
 
 [deps]
 
-source_file="res://_/_ART/3D/Models/3D_Wave_360_F_667195231_RieyYLOQIwZrgNf4vI7J5vcojlQCFDJV.jpg"
-dest_files=["res://.godot/imported/3D_Wave_360_F_667195231_RieyYLOQIwZrgNf4vI7J5vcojlQCFDJV.jpg-4b68b049f59b653e12b525e7382d830b.s3tc.ctex", "res://.godot/imported/3D_Wave_360_F_667195231_RieyYLOQIwZrgNf4vI7J5vcojlQCFDJV.jpg-4b68b049f59b653e12b525e7382d830b.etc2.ctex"]
+source_file="res://_/_ART/3D/Models/MSH_Support_T_Support_Wood.jpg"
+dest_files=["res://.godot/imported/MSH_Support_T_Support_Wood.jpg-04f83d5a3dfde46f6d4ac1075286b27a.s3tc.ctex", "res://.godot/imported/MSH_Support_T_Support_Wood.jpg-04f83d5a3dfde46f6d4ac1075286b27a.etc2.ctex"]
 
 [params]
 

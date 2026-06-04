@@ -63,6 +63,7 @@ albedo_texture = SubResource("ViewportTexture_nmnny")
 transform = Transform3D(-0.99735945, -0.07261058, 0.0013600151, 0.00071161985, -0.028497353, -0.99959373, 0.07261983, -0.99695337, 0.02847369, -0.04350251, 0.62977195, 0.5956744)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Katana" unique_id=723745229]
+active = false
 libraries/ = SubResource("AnimationLibrary_1he0v")
 autoplay = &"new_animation"
 
@@ -95,6 +96,10 @@ transform = Transform3D(1, 0, 0, 0, 1, -2.9802322e-08, 0, 2.9802322e-08, 1, 0, 0
 mesh = SubResource("QuadMesh_nmnny")
 skeleton = NodePath("../MeshInstance3D")
 surface_material_override/0 = SubResource("StandardMaterial3D_3vitg")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=357850458]
+transform = Transform3D(1, 0, 0, 0, 0.972361, 0.2334824, 0, -0.2334824, 0.972361, 0, 0.74055, 0.49002087)
+current = true
 
 [connection signal="katana_collision_point" from="Katana" to="Scripts/PositionDuSabre/Script" method="set_point_of_katana"]
 [connection signal="on_requested_texture" from="DrawingBoard" to="Scripts/PositionDuSabre/Script/PixelCounter" method="push_in_texture_to_analyze"]
