@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://cemfjdjdsd4y8" path="res://_/_ART/2D/Sprites/katana.png" id="2_pma6d"]
 [ext_resource type="Texture2D" uid="uid://c5oc2qjc0irv7" path="res://_/_ART/2D/Sprites/katana2.png" id="3_kotl4"]
 [ext_resource type="PackedScene" uid="uid://c3dprie6kja07" path="res://_/_DATAS/Assets/P_UI_MainPanel_Button.tscn" id="4_idujo"]
+[ext_resource type="Script" uid="uid://bem5sdrxhadv7" path="res://_/projet/_Jürgen/Scripts/play_button.gd" id="5_pma6d"]
+[ext_resource type="PackedScene" uid="uid://btbbr057a83en" path="res://_/projet/_Jürgen/Scenes/position_du_sabre.tscn" id="6_kotl4"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4wrup"]
 font = ExtResource("1_fg4vr")
@@ -109,3 +111,10 @@ layout_mode = 2
 custom_minimum_size = Vector2(300, 150)
 layout_mode = 2
 text = "QUIT"
+
+[node name="Node" type="Node" parent="." unique_id=1473422933 node_paths=PackedStringArray("button_play")]
+script = ExtResource("5_pma6d")
+button_play = NodePath("../Panel/MarginContainer/VBoxContainer/Control/HBoxContainer/Panel/HBoxContainer/MarginContainer/Panel")
+scene_main = ExtResource("6_kotl4")
+
+[connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/Control/HBoxContainer/Panel/HBoxContainer/MarginContainer/Panel" to="Node" method="_button_pressed"]

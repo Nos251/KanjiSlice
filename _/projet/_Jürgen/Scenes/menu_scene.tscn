@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://d21mh46cgpy3r"]
+
+[ext_resource type="PackedScene" uid="uid://2kq7qngm75mi" path="res://_/_DATAS/Assets/P_UI_MainPanel.tscn" id="1_5xan0"]
+
+[node name="Menu_Scene" type="Node3D" unique_id=1142256412]
+
+[node name="P_UI_MainPanel" parent="." unique_id=40664046 instance=ExtResource("1_5xan0")]
+
+[editable path="P_UI_MainPanel"]

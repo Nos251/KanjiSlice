@@ -11,6 +11,7 @@ sky_material = SubResource("PanoramaSkyMaterial_jpir8")
 
 [sub_resource type="Environment" id="Environment_0ngtl"]
 background_mode = 2
+background_energy_multiplier = 1.25
 sky = SubResource("Sky_e23wy")
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_lgvuk"]
@@ -27,6 +28,7 @@ size = Vector2i(1152, 648)
 [node name="AnchorCamera3D" type="Node3D" parent="SubViewport" unique_id=1487489997]
 
 [node name="Camera3D" type="Camera3D" parent="SubViewport/AnchorCamera3D" unique_id=625861932]
+transform = Transform3D(-0.05233594, 0, -0.9986295, 0, 1, 0, 0.9986295, 0, -0.05233594, 0, 4.4332004, 1.1937683)
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=523936121]
 offset_right = 40.0
