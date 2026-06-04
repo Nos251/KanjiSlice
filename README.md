@@ -11,7 +11,6 @@ KanjiSlice is a game that helps you learn kanji by having fun tracing them with 
 
 
 
-
 Recovert old archived version:
 ```
 git clone https://github.com/Nos251/KanjiSlice.git
