@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5oc2qjc0irv7"
-path="res://.godot/imported/katana2.png-cc3d3783c99f3a6e372ccf160573b27e.ctex"
+uid="uid://dbhh5ku7u33pg"
+path="res://.godot/imported/2D_Katana.png-e6444e7fe071967390ca718e0ee9e5bc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_/_ART/2D/Sprites/katana2.png"
-dest_files=["res://.godot/imported/katana2.png-cc3d3783c99f3a6e372ccf160573b27e.ctex"]
+source_file="res://_/_ART/2D/Sprites/2D_Katana.png"
+dest_files=["res://.godot/imported/2D_Katana.png-e6444e7fe071967390ca718e0ee9e5bc.ctex"]
 
 [params]
 

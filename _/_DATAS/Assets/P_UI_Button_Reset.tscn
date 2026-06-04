@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://f5g2ck4r8ea2"]
+
+[ext_resource type="PackedScene" path="res://_/_DATAS/Assets/Check.tscn" id="1_0jsax"]
+[ext_resource type="Texture2D" uid="uid://wuxryflu46v6" path="res://_/_ART/UI/Icons/ICN_Reset.png" id="2_0jsax"]
+
+[node name="P_UI_Button_Reset" type="Control" unique_id=1169833127]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" parent="." unique_id=208327250 instance=ExtResource("1_0jsax")]
+custom_minimum_size = Vector2(600, 450)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("2_0jsax")
+icon_alignment = 1

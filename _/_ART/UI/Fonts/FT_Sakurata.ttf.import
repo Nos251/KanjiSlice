@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://d4d3wjwpsdy0t"
-path="res://.godot/imported/JapanBento-DemoVersion-Regular.otf-1a54da0bc45b31691f5a5e319dbba4bb.fontdata"
+uid="uid://cacvfc730bbfy"
+path="res://.godot/imported/FT_Sakurata.ttf-0afc22b0b0924e6c133cccb69cac6b37.fontdata"
 
 [deps]
 
-source_file="res://_/_ART/UI/Fonts/JapanBento-DemoVersion-Regular.otf"
-dest_files=["res://.godot/imported/JapanBento-DemoVersion-Regular.otf-1a54da0bc45b31691f5a5e319dbba4bb.fontdata"]
+source_file="res://_/_ART/UI/Fonts/FT_Sakurata.ttf"
+dest_files=["res://.godot/imported/FT_Sakurata.ttf-0afc22b0b0924e6c133cccb69cac6b37.fontdata"]
 
 [params]
 
