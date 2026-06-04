@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cqkrld1rgiqya"]
+
+[ext_resource type="Texture2D" uid="uid://bjrlldmalyjbr" path="res://_/_ART/3D/Textures/T_Wave.jpg" id="1_ovack"]
+
+[resource]
+resource_name = "Material"
+cull_mode = 2
+albedo_texture = ExtResource("1_ovack")
+roughness = 0.5
