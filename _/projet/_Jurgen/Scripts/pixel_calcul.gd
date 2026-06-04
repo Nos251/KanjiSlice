@@ -3,8 +3,12 @@ extends Node
 
 @export var liste_kanji : Array[Texture2D] = []
 @export var sprite2d : Sprite2D
+@export var result_at_ready : Dictionary
+@export var result_given : Dictionary
+
 static var sprite2d_static : Sprite2D
 var kanji : Texture2D
+
 
 func _enter_tree() -> void:
 	sprite2d_static = sprite2d
@@ -16,7 +20,11 @@ func _enter_tree() -> void:
 		push_error("PixelCounter: La liste_kanji est vide dans l'inspecteur !")
 func _ready() -> void:
 	if kanji:
-		analyze_layer_pixels(kanji)
+		result_at_ready = analyze_layer_pixels(kanji)
+
+func push_in_texture_to_analyze(texture2D: Texture2D):
+	result_given = analyze_layer_pixels(texture2D)
+		
 static func analyze_layer_pixels(texture: Texture2D, alpha_threshold: float = 0.05, black_threshold: float = 0.05) -> Dictionary:	
 	var result = {
 		"total_pixels": 0,

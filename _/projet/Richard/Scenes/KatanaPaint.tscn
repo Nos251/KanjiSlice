@@ -1,10 +1,8 @@
 [gd_scene format=3 uid="uid://b8k0n7i8wwixf"]
 
 [ext_resource type="PackedScene" uid="uid://knk7ldjyionw" path="res://_/projet/Richard/Scenes/Prefab/p_katana.tscn" id="1_3vitg"]
-[ext_resource type="Script" uid="uid://bvnwbj485wjwo" path="res://_/projet/Richard/Scripts/drawing_script.gd" id="2_80fep"]
-[ext_resource type="Texture2D" uid="uid://cvax5ydcao40e" path="res://_/projet/_Jürgen/Assets/Kanji/Facile/Fire.svg" id="4_80fep"]
-[ext_resource type="PackedScene" uid="uid://btbbr057a83en" path="res://_/projet/_Jürgen/Scenes/position_du_sabre.tscn" id="5_1he0v"]
-[ext_resource type="Script" uid="uid://cp2mcj4870i2a" path="res://_/projet/_Jürgen/Scripts/relocated_point_of_katana.gd" id="6_reeod"]
+[ext_resource type="PackedScene" uid="uid://b8ceyt6f2cj1n" path="res://_/projet/Richard/Scenes/Prefab/p_drawing_board.tscn" id="2_nmnny"]
+[ext_resource type="PackedScene" uid="uid://btbbr057a83en" path="res://_/projet/_Jurgen/Scenes/position_du_sabre.tscn" id="3_nmnny"]
 
 [sub_resource type="Animation" id="Animation_3vitg"]
 length = 0.001
@@ -53,9 +51,11 @@ transparency = 1
 albedo_color = Color(0.56078434, 0.7372549, 0.5254902, 1)
 albedo_texture = SubResource("ViewportTexture_3vitg")
 
-[sub_resource type="QuadMesh" id="QuadMesh_3vitg"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nmnny"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1he0v"]
+[sub_resource type="QuadMesh" id="QuadMesh_nmnny"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3vitg"]
 
 [node name="KatanaPaint" type="Node3D" unique_id=1609574989]
 
@@ -66,53 +66,35 @@ transform = Transform3D(-0.99735945, -0.07261058, 0.0013600151, 0.00071161985, -
 libraries/ = SubResource("AnimationLibrary_1he0v")
 autoplay = &"new_animation"
 
-[node name="DrawingBoard" type="Node3D" parent="." unique_id=1137499325 node_paths=PackedStringArray("painting_board")]
-script = ExtResource("2_80fep")
-painting_board = NodePath("../Scripts/PositionDuSabre/Quad/Kanji_Support/MeshInstance3D2")
-is_drawing = true
-
-[node name="Anchor" type="Node3D" parent="DrawingBoard" unique_id=88601096]
-transform = Transform3D(-0.9925221, 0, 0.12206475, 0, 1, 0, -0.12206475, 0, -0.9925221, 0, 0, 0)
+[node name="DrawingBoard" parent="." unique_id=53190456 instance=ExtResource("2_nmnny")]
 
 [node name="DirectionalLight3D" type="SpotLight3D" parent="." unique_id=1176857340]
 transform = Transform3D(-0.98536646, -0.063394904, 0.15822142, 0, 0.9282614, 0.3719284, -0.17044921, 0.36648577, -0.9146777, 0, 1.4091115, -2.3790429)
 
 [node name="Scripts" type="Node3D" parent="." unique_id=380061227]
 
-[node name="PositionDuSabre" parent="Scripts" unique_id=704180931 instance=ExtResource("5_1he0v")]
-
-[node name="Sprite2D" parent="Scripts/PositionDuSabre/SubViewport" parent_id_path=PackedInt32Array(704180931, 240347611) index="0" unique_id=1459200077]
-texture = ExtResource("4_80fep")
-
-[node name="PixelCounter" parent="Scripts/PositionDuSabre/Script" parent_id_path=PackedInt32Array(704180931, 835427384) index="0" unique_id=1151370069]
-liste_kanji = Array[Texture2D]([])
+[node name="PositionDuSabre" parent="Scripts" unique_id=704180931 instance=ExtResource("3_nmnny")]
 
 [node name="MeshInstance3D2" parent="Scripts/PositionDuSabre" index="2" unique_id=1448721934]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 1, -1.8451089, 0.7584158, -0.16725647)
 visible = false
 
-[node name="Camera3D" parent="Scripts/PositionDuSabre/Node3D/Pivot" parent_id_path=PackedInt32Array(704180931, 1693644126) index="0" unique_id=1686985493]
-transform = Transform3D(0.78706586, -0.22732481, 0.57345515, 2.0065809e-08, 0.92962223, 0.3685139, -0.61686903, -0.2900447, 0.7316739, 0.17237878, 0.6493776, 0.7812143)
-
 [node name="Quad" parent="Scripts/PositionDuSabre" index="6" unique_id=458882736]
-transform = Transform3D(0.5, 0, 0, 0, 0.10797011, -0.4882033, 0, 0.4882033, 0.10797011, 0, 0.32009035, 0)
+transform = Transform3D(0.5, 0, 0, 0, 0.29928118, -0.40053812, 0, 0.40053812, 0.29928118, 0.051255047, 0.4168378, -0.28366685)
 
 [node name="Kanji_Support" parent="Scripts/PositionDuSabre/Quad" index="0" unique_id=1440527393]
 surface_material_override/0 = SubResource("StandardMaterial3D_80fep")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Scripts/PositionDuSabre/Quad/Kanji_Support" index="1" unique_id=1625052082]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.763024e-10, 0.015471995)
-mesh = SubResource("QuadMesh_3vitg")
-surface_material_override/0 = SubResource("StandardMaterial3D_1he0v")
+[node name="MeshInstance3D" parent="Scripts/PositionDuSabre/Quad/Kanji_Support" index="0" unique_id=774543242]
+surface_material_override/0 = SubResource("StandardMaterial3D_nmnny")
 
-[node name="RelocatedPointOfKatana" type="Node" parent="Scripts/PositionDuSabre/Percentage_Texture_Collision" parent_id_path=PackedInt32Array(704180931, 2101423386) index="0" unique_id=1985904353 node_paths=PackedStringArray("down_left", "top_right", "pixel_counter")]
-script = ExtResource("6_reeod")
-down_left = NodePath("../../Quad/down_left")
-top_right = NodePath("../../Quad/up_right")
-pixel_counter = NodePath("../../Script/PixelCounter")
-metadata/_custom_type_script = "uid://cp2mcj4870i2a"
+[node name="DrawingMesh" type="MeshInstance3D" parent="Scripts/PositionDuSabre/Quad/Kanji_Support" index="1" unique_id=2132481418]
+transform = Transform3D(1, 0, 0, 0, 1, -2.9802322e-08, 0, 2.9802322e-08, 1, 0, 0, 0)
+mesh = SubResource("QuadMesh_nmnny")
+skeleton = NodePath("../MeshInstance3D")
+surface_material_override/0 = SubResource("StandardMaterial3D_3vitg")
 
 [connection signal="katana_collision_point" from="Katana" to="Scripts/PositionDuSabre/Script" method="set_point_of_katana"]
-[connection signal="katana_is_touching" from="Katana" to="DrawingBoard" method="set_is_drawing"]
-[connection signal="local_percentage_emit" from="Scripts/PositionDuSabre/Script" to="DrawingBoard" method="set_cursor_position"]
+[connection signal="on_requested_texture" from="DrawingBoard" to="Scripts/PositionDuSabre/Script/PixelCounter" method="push_in_texture_to_analyze"]
 
 [editable path="Scripts/PositionDuSabre"]
