@@ -34,17 +34,17 @@ func _ready() -> void:
 	mon_calque = pixel_counter.kanji
 	stats = pixel_counter.analyze_layer_pixels(mon_calque)
 	
-	print("--- Analyse du Calque ---")
-	print("Total pixels : ", stats.total_pixels)
-	print("Pixels Invisibles (Alpha) : ", stats.transparent_pixels)
-	print("Pixels Visibles : ", stats.visible_pixels)
-	print("Pixels Noirs détectés : ", stats.black_pixels)
+	#print("--- Analyse du Calque ---")
+	#print("Total pixels : ", stats.total_pixels)
+	#print("Pixels Invisibles (Alpha) : ", stats.transparent_pixels)
+	#print("Pixels Visibles : ", stats.visible_pixels)
+	#print("Pixels Noirs détectés : ", stats.black_pixels)
 	
 	origin_pixel_alpha = stats["transparent_pixels"]
 	origin_pixel_black = stats["black_pixels"]
 	
-	print("Original Pixel Invisible : ", origin_pixel_alpha)
-	print("Original Pixel Black :", origin_pixel_black)
+	#print("Original Pixel Invisible : ", origin_pixel_alpha)
+	#print("Original Pixel Black :", origin_pixel_black)
 	end_of_level_script()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -81,8 +81,8 @@ func _process(delta: float) -> void:
 
 	# 3. On range ça dans ton Vector3 pour l'inspecteur ou l'affichage
 	var local_percentage : Vector3 = Vector3(katana_percentage_x,0.0, katana_percentage_y,)
-	print("katana : ", local_position_of_katana_unity.x, ". local : ", local_width_height.x)
-	print("Position Katana en % : ", local_percentage)
+	#print("katana : ", local_position_of_katana_unity.x, ". local : ", local_width_height.x)
+	#print("Position Katana en % : ", local_percentage)
 	local_percentage_emit.emit(local_percentage) 
 	
 func relocate_global_to_local(global_point : Vector3) :

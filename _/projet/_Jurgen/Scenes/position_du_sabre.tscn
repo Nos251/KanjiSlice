@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dfuf8wkj3qtt7" path="res://_/projet/_Jurgen/Assets/Kanji/Facile/Six.svg" id="5_h5gec"]
 [ext_resource type="Texture2D" uid="uid://c5nsnmbbci604" path="res://_/projet/_Jurgen/Assets/Kanji/Facile/Talent.svg" id="7_jq8r1"]
 [ext_resource type="Script" uid="uid://ir1g0akkr1f8" path="res://_/projet/_Jurgen/Scenes/percentage_texture_collision.gd" id="8_5r4q8"]
+[ext_resource type="Script" uid="uid://drcs8ybtew8mw" path="res://_/projet/_Jurgen/Scripts/door_open_condition.gd" id="9_pxfo0"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_eqtvh"]
 
@@ -137,5 +138,25 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, -0.5)
 
 [node name="Percentage_Texture_Collision" type="Node" parent="." unique_id=2101423386]
 script = ExtResource("8_5r4q8")
+
+[node name="door_open_condition" type="Node" parent="Percentage_Texture_Collision" unique_id=10981598 node_paths=PackedStringArray("relocated_point_of_katana_script", "button_check_score")]
+script = ExtResource("9_pxfo0")
+relocated_point_of_katana_script = NodePath("../../Script")
+button_check_score = NodePath("../../Control/Button")
+
+[node name="Control" type="Control" parent="." unique_id=363754834]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="Control" unique_id=1511892991]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.179
+anchor_bottom = 0.261
+offset_right = 47.84
+offset_bottom = 20.56
+text = "Check"
 
 [connection signal="on_local_position_debug" from="Script" to="Label3D" method="set_text"]
