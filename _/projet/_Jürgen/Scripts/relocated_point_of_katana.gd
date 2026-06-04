@@ -1,6 +1,7 @@
 class_name RelocatedPointOfKatana
 
 extends Node
+## ceteedhcvgjhfjhkg frtertsfgf k100
 signal local_percentage_emit(vector3: Vector3)
 signal on_local_position_debug(text:String)
 @export var down_left : Node3D 
@@ -26,7 +27,7 @@ var origin_pixel_black : int
 @export var katana_percentage_y : float
 # Called when the node enters the scene tree for the first time.
 
-func import_point_of_katana(katana : Vector3):
+func set_point_of_katana(katana : Vector3):
 	point_of_katana = katana
 func _ready() -> void:
 	
@@ -72,8 +73,8 @@ func _process(delta: float) -> void:
 	if local_width_height.x != 0 and local_width_height.z != 0:
 		# CALCUL DU POURCENTAGE (Option Ratio : de 0.0 à 1.0)
 		# Si tu veux entre 0% et 100%, rajoute " * 100.0 " à la fin des lignes en dessous
-		katana_percentage_x = (local_position_of_katana_unity.x / local_width_height.x) * 100.0
-		katana_percentage_y = (local_position_of_katana_unity.z / local_width_height.z) * 100.0
+		katana_percentage_x = (local_position_of_katana_unity.x / local_width_height.x)
+		katana_percentage_y = (local_position_of_katana_unity.z / local_width_height.z)
 	else:
 		katana_percentage_x = 0.0
 		katana_percentage_y = 0.0
