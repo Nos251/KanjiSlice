@@ -1,14 +1,15 @@
 [gd_scene format=3 uid="uid://d21mh46cgpy3r"]
 
+[ext_resource type="Script" uid="uid://177gygw2xqqu" path="res://addons/godot-xr-tools/staging/scene_base.gd" id="1_0gkvq"]
 [ext_resource type="PackedScene" uid="uid://2kq7qngm75mi" path="res://_/_DATAS/Assets/P_UI_MainPanel.tscn" id="1_5xan0"]
 [ext_resource type="PackedScene" uid="uid://btbbr057a83en" path="res://_/projet/_Jurgen/Scenes/position_du_sabre.tscn" id="2_4qvha"]
-[ext_resource type="PackedScene" uid="uid://cvf8letehlo3c" path="res://_/projet/_Jurgen/Scenes/MainSceneNormal.tscn" id="3_tlso1"]
 
 [node name="Menu_Scene" type="Node3D" unique_id=1142256412]
+script = ExtResource("1_0gkvq")
 
 [node name="P_UI_MainPanel" parent="." unique_id=40664046 instance=ExtResource("1_5xan0")]
 
 [node name="Button_Script" parent="P_UI_MainPanel" index="1" unique_id=1473422933]
-liste_scene = Array[PackedScene]([ExtResource("2_4qvha"), ExtResource("3_tlso1")])
+liste_scene = Array[PackedScene]([ExtResource("2_4qvha")])
 
 [editable path="P_UI_MainPanel"]

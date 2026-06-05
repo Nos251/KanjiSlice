@@ -82,13 +82,14 @@ cull_mask = 1048573
 [node name="HMDViewport" type="SubViewport" parent="." unique_id=408771868]
 
 [node name="DemoStaging" parent="HMDViewport" unique_id=356070157 instance=ExtResource("1_sk82w")]
-main_scene = "uid://00w3iksx4x18"
+main_scene = "uid://hp1ses8axrw2"
 prompt_for_continue = false
 
 [node name="XRCamera3D" parent="HMDViewport/DemoStaging/XROrigin3D" index="0"]
 cull_mask = 1048571
 
-[node name="StartXR" parent="HMDViewport/DemoStaging" index="4"]
+[node name="StartXR" parent="HMDViewport/DemoStaging" index="4" node_paths=PackedStringArray("viewport")]
+viewport = NodePath("../..")
 enable_passthrough = true
 
 [connection signal="toggled" from="VBoxContainer/ShowDebugAxis" to="." method="_on_show_debug_axis_toggled"]

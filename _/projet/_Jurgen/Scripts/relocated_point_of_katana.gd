@@ -50,15 +50,15 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 
 	local_position_of_katana = relocate_global_to_local(point_of_katana)
-	DebugDraw3D.draw_line(Vector3(0,0,0),local_position_of_katana,Color.YELLOW)
-	
-	DebugDraw3D.draw_line(Vector3(0,0,0),Vector3(1,0,0),Color.RED)
-	DebugDraw3D.draw_line(Vector3(0,0,0),Vector3(0,1,0),Color.GREEN)
-	DebugDraw3D.draw_line(Vector3(0,0,0),Vector3(0,0,-1),Color.BLUE)
+	#DebugDraw3D.draw_line(Vector3(0,0,0),local_position_of_katana,Color.YELLOW)
+	#
+	#DebugDraw3D.draw_line(Vector3(0,0,0),Vector3(1,0,0),Color.RED)
+	#DebugDraw3D.draw_line(Vector3(0,0,0),Vector3(0,1,0),Color.GREEN)
+	#DebugDraw3D.draw_line(Vector3(0,0,0),Vector3(0,0,-1),Color.BLUE)
 	var l : Vector3 = down_left.global_position
-	DebugDraw3D.draw_line(l ,l + down_left.global_basis.x,Color.RED)
-	DebugDraw3D.draw_line(l ,l + down_left.global_basis.y,Color.GREEN)
-	DebugDraw3D.draw_line(l ,l + -down_left.global_basis.z,Color.BLUE)
+	#DebugDraw3D.draw_line(l ,l + down_left.global_basis.x,Color.RED)
+	#DebugDraw3D.draw_line(l ,l + down_left.global_basis.y,Color.GREEN)
+	#DebugDraw3D.draw_line(l ,l + -down_left.global_basis.z,Color.BLUE)
 	
 	local_position_of_katana_unity =local_position_of_katana
 	local_position_of_katana_unity.z*=-1
