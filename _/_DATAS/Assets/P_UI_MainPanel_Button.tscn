@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c3dprie6kja07"]
 
-[ext_resource type="FontFile" uid="uid://02u0gcorq7bs" path="res://_/_ART/UI/Fonts/SAKURATA.ttf" id="1_ne1ie"]
+[ext_resource type="FontFile" uid="uid://cacvfc730bbfy" path="res://_/_ART/UI/Fonts/FT_Sakurata.ttf" id="1_ne1ie"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_08fs0"]
 bg_color = Color(0.69411767, 0, 0, 1)
