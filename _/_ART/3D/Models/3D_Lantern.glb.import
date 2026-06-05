@@ -41,12 +41,12 @@ _subresources={
 "materials": {
 "T_Lantern": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://_/_ART/3D/Materials/T_Lantern.tres",
+"use_external/fallback_path": "res://_/_ART/3D/Materials/M_Lantern.tres",
 "use_external/path": "uid://creeqphp7x5vg"
 },
 "T_Lantern_M": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://_/_ART/3D/Materials/T_Lantern_M.tres",
+"use_external/fallback_path": "res://_/_ART/3D/Materials/M_LanternMetal.tres",
 "use_external/path": "uid://baor2wlmq7fe2"
 }
 }

@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://2kq7qngm75mi"]
 
-[ext_resource type="FontFile" uid="uid://d4d3wjwpsdy0t" path="res://_/_ART/UI/Fonts/JapanBento-DemoVersion-Regular.otf" id="1_fg4vr"]
-[ext_resource type="Texture2D" uid="uid://cemfjdjdsd4y8" path="res://_/_ART/2D/Sprites/katana.png" id="2_pma6d"]
-[ext_resource type="Texture2D" uid="uid://c5oc2qjc0irv7" path="res://_/_ART/2D/Sprites/katana2.png" id="3_kotl4"]
+[ext_resource type="FontFile" uid="uid://b560ppnoudq6v" path="res://_/_ART/UI/Fonts/FT_JapanBento.otf" id="1_fg4vr"]
+[ext_resource type="Texture2D" uid="uid://dbhh5ku7u33pg" path="res://_/_ART/2D/Sprites/2D_Katana.png" id="2_pma6d"]
+[ext_resource type="Texture2D" uid="uid://t4irut2oo11w" path="res://_/_ART/2D/Sprites/2D_KatanaStraight.png" id="3_kotl4"]
 [ext_resource type="PackedScene" uid="uid://c3dprie6kja07" path="res://_/_DATAS/Assets/P_UI_MainPanel_Button.tscn" id="4_idujo"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4wrup"]
