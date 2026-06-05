@@ -1,8 +1,15 @@
 [gd_scene format=3 uid="uid://bmxm67hodkcaw"]
 
 [ext_resource type="PackedScene" uid="uid://cudemunrrg13p" path="res://_/_ART/3D/Models/3D_Sakura.glb" id="1_yl453"]
+[ext_resource type="PackedScene" uid="uid://c4bqyxbe5ou23" path="res://_/_ART/3D/Models/3D_FOX.glb" id="2_2tcc3"]
 
 [node name="Node3D" type="Node3D" unique_id=1394091301]
 
-[node name="3D_Sakura" parent="." unique_id=1592604449 instance=ExtResource("1_yl453")]
+[node name="3D_Sakura" parent="." unique_id=884250761 instance=ExtResource("1_yl453")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0702858, 0, 0.23882318)
+
+[node name="3D_FOX" parent="." unique_id=1998148288 instance=ExtResource("2_2tcc3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26490402, 0, 0.06302118)
+
+[node name="3D_Sakura2" parent="." unique_id=893279962 instance=ExtResource("1_yl453")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5138624, 0, 0.49490404)

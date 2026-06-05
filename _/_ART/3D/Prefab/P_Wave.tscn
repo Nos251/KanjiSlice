@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://b0233na30m1n6"]
+
+[ext_resource type="PackedScene" uid="uid://b425ikaykfouq" path="res://_/_ART/3D/Models/3D_Wave.glb" id="1_ruwfn"]
+
+[node name="P_Wave" type="Node3D" unique_id=491575876]
+
+[node name="3D_Wave" parent="." unique_id=147428548 instance=ExtResource("1_ruwfn")]

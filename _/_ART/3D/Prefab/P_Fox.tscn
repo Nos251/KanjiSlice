@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bq30df5evettx"]
+
+[ext_resource type="PackedScene" uid="uid://c4bqyxbe5ou23" path="res://_/_ART/3D/Models/3D_FOX.glb" id="1_0g23d"]
+
+[node name="P_Fox" type="Node3D" unique_id=1426926807]
+
+[node name="3D_FOX" parent="." unique_id=1574244419 instance=ExtResource("1_0g23d")]
