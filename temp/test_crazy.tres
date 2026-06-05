@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bfskswo6sgw88"]
+
+[ext_resource type="Texture2D" uid="uid://dp4iugpafwqac" path="res://_/projet/JP/Assets/Textures/ART_Room_A-Perso_Tatami001_1K-JPG_Color.jpg" id="1_o8cet"]
+
+[resource]
+albedo_texture = ExtResource("1_o8cet")
+albedo_texture_force_srgb = true

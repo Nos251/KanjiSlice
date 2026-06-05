@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cng2m6dqcjkj5"]
+
+[ext_resource type="PackedScene" uid="uid://brvv5uy21m76t" path="res://temp/ART_Room_A-Perso.glb" id="2_noarx"]
+[ext_resource type="Material" uid="uid://bfskswo6sgw88" path="res://temp/test_crazy.tres" id="6_tereu"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_tereu"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_cdqbm"]
+
+[node name="Node3D" type="Node3D" unique_id=1827598439]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=501574320]
+transform = Transform3D(0.995235, 0.052994255, -0.081846215, -0.009267382, 0.887018, 0.4616418, 0.09706343, -0.45868355, 0.8832825, 3.1938932, 2.2830572, 2.314999)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Camera3D" unique_id=1962767369]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Camera3D" unique_id=2095184188]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Camera3D" unique_id=1111237013]
+transform = Transform3D(0.99999994, 7.450581e-09, 0, 0, 0.99999994, 2.9802322e-08, 0, 0, 0.9999999, -0.29226518, 0.050274253, -3.5213404)
+mesh = SubResource("SphereMesh_tereu")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Camera3D" unique_id=1928305399]
+transform = Transform3D(0.9999999, 1.4901161e-08, -7.450581e-09, 0, 0.9999999, 2.9802322e-08, -7.450581e-09, 0, 0.9999998, 0.97173595, -0.26312375, -2.2057586)
+mesh = SubResource("QuadMesh_cdqbm")
+surface_material_override/0 = ExtResource("6_tereu")
+
+[node name="ART_Room_A-Perso" parent="." unique_id=324863936 instance=ExtResource("2_noarx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3300819, 0, 0.851943)
