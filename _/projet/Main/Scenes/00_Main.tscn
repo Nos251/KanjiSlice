@@ -93,7 +93,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.33755517, 0, 0)
 [node name="Hand_Nails_L" parent="XREssentials/XROrigin3D/XR_LeftHand/XRToolsCollisionHand/LeftHand" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01, 0, 0.05)
 
-[node name="Skeleton3D" parent="XREssentials/XROrigin3D/XR_LeftHand/XRToolsCollisionHand/LeftHand/Hand_Nails_L/Armature" index="0" unique_id=1035150482]
+[node name="Skeleton3D" parent="XREssentials/XROrigin3D/XR_LeftHand/XRToolsCollisionHand/LeftHand/Hand_Nails_L/Armature" index="0" unique_id=1891098279]
 bones/1/rotation = Quaternion(0.323537, -2.5658142e-05, -0.027220426, 0.9458239)
 bones/2/rotation = Quaternion(-0.09044407, -0.04151748, -0.16629349, 0.98104167)
 bones/3/rotation = Quaternion(-0.04661986, 0.02097099, 0.010327632, 0.9986392)
@@ -130,7 +130,7 @@ tracker = &"right_hand"
 [node name="Hand_Nails_R" parent="XREssentials/XROrigin3D/XR_RightHand/XRToolsCollisionHand/RightHand" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01, 0, 0.05)
 
-[node name="Skeleton3D" parent="XREssentials/XROrigin3D/XR_RightHand/XRToolsCollisionHand/RightHand/Hand_Nails_R/Armature" index="0" unique_id=217553363]
+[node name="Skeleton3D" parent="XREssentials/XROrigin3D/XR_RightHand/XRToolsCollisionHand/RightHand/Hand_Nails_R/Armature" index="0" unique_id=1284114961]
 bones/1/rotation = Quaternion(0.323537, 2.5658142e-05, 0.027220426, 0.9458239)
 bones/2/rotation = Quaternion(-0.09044407, 0.04151748, 0.16629349, 0.98104167)
 bones/3/rotation = Quaternion(-0.04661986, -0.020970985, -0.010327632, 0.9986392)
